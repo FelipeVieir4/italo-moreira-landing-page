@@ -9,14 +9,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#1D3557", // Azul Marinho (Fundo principal)
-        secondary: "#2C2F33", // Cinza Chumbo (Seções alternadas)
+        primary: "#003366", // Azul Marinho (Fundo principal)
+        secondary: "#1a242e", // Cinza Chumbo (Seções alternadas)
         textPrimary: "#F9F9F9", // Branco Neve (Texto principal)
+        textSecondary: "#1a242e", // Cinza Chumbo (Texto secundário)
         highlight: "#C9A349", // Dourado Suave (Destaques e botões)
-        muted: "#D9D9D9", // Cinza Claro (Seções secundárias)
+        muted: "#FFFFFF", // Cinza Claro (Seções secundárias)
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        primary: ["Plus Jakarta Sans", "serif"],
+        secondary: ["Playfair Display", "serif"],
       },
     },
   },
