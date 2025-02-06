@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italo Moreira - Advocacia</title>
+    <meta name="description" content="Advocacia em Belo Horizonte, especialista em Direito Penal e Civil.">
+    <meta name="keywords"
+        content="advogado, advocacia, direito penal, direito civil, Belo Horizonte, consultoria jurídica">
+    <meta name="author" content="Italo Moreira">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&family=Plus+Jakarta+Sans:wght@200;800&display=swap"
+        rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar-container ">
+            <div class="navbar-logo">
+                <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"
+                    xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M473.836,111.771V0H38.164v111.771h31.349v41.76c-7.484,8.386-12.043,19.435-12.043,31.533
+                       c0,26.146,21.271,47.419,47.419,47.419c5.639,0,11.051-0.995,16.073-2.809V512h49.358h79.412h13.236h79.412h48.661V229.674
+                       c5.022,1.815,10.432,2.809,16.073,2.809c26.146,0,47.419-21.272,47.419-47.419c0-12.098-4.56-23.147-12.043-31.533v-41.76H473.836
+                       z M104.888,201.137c-8.862,0-16.072-7.21-16.072-16.072c0-8.862,7.209-16.072,16.072-16.072c8.862,0,16.073,7.21,16.073,16.072
+                       C120.96,193.927,113.75,201.137,104.888,201.137z M218.384,480.653h-16.718V249.438c0-4.609,3.75-8.359,8.359-8.359
+                       c4.609,0,8.359,3.75,8.359,8.359V480.653z M311.032,480.653h-16.718V249.438c0-4.609,3.75-8.359,8.359-8.359
+                       c4.609,0,8.359,3.75,8.359,8.359V480.653z M359.694,480.653h-0.001h-17.314V249.438c0-21.894-17.812-39.706-39.706-39.706
+                       c-21.894,0-39.706,17.812-39.706,39.706v231.215h-13.236V249.438c0-21.894-17.812-39.706-39.706-39.706
+                       c-21.894,0-39.706,17.812-39.706,39.706v231.215h-18.011V168.992h207.386V480.653z M120.96,137.645H100.86v-25.875h310.279v25.875
+                       H391.04H120.96z M407.112,201.137c-8.862,0-16.073-7.21-16.073-16.072c0-8.862,7.21-16.072,16.073-16.072
+                       c8.862,0,16.072,7.21,16.072,16.072C423.184,193.927,415.975,201.137,407.112,201.137z M442.486,80.424H69.513h-0.002V31.347
+                       h372.977v49.077H442.486z" />
+                        </g>
+                    </g>
+                </svg>
+                <a href="#home">
+                    <div class="logo-text">
+                        <p>Italo Moreira</p>
+                        <p>Advocacia</p>
+                    </div>
+                </a>
+            </div>
+
+
+
+            <span class="navbar-toggle-icon" aria-label="Menu" onclick="handleHamburguerMenu()">&#9776;</span>
+
+
+            <div class="navbar-menu" onclick="handleHamburguerMenu()">
+                <ul class="navbar-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#numeros">Números</a></li>
+                    <li><a href="#mais">Mais</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content container">
+                <div class="hero-text">
+                    <!-- <p class="hero-location info-blue-box">Atendimento em todo o Brasil</p> -->
+                    <h1>Advocacia Especializada</h1>
+                    <p>Aqui, nosso foco é garantir sua tranquilidade e segurança jurídica por meio de soluções ágeis e
+                        satisfatórias ao seu direito.</p>
+                    <button class="btn" onclick="iniciarChatWhatsApp()">
+                        <img src="img/wpp-btn.webp" alt="Whatsapp">
+                        Contato
+                    </button>
+                </div>
+                <div class="hero-img">
+                    <img src="img/model-bg.png" alt="Advogado">
+                    <div class="hero-avatar-info">
+                        <h4>Dr. Italo Moreira</h4>
+                        <p>Advogado - OAB/MG: 235.948</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services page-light" id="servicos">
+            <div class="page-light-container container">
+                <div class="data">
+                    <div class="tittle">
+                        <h2>Serviços</h2>
+                    </div>
+                    <div class="description">
+                        <p>Serviços jurídicos com foco na abordagem humanizada e personalizada, garantindo soluções que
+                            atendem às suas necessidades de forma única e eficaz
+                        </p>
+                    </div>
+                </div>
+                <div class="services-card-container">
+                    <div class="card">
+                        <p class="card-title">Product Name</p>
+                        <p class="small-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
+                            veritatis nobis saepe itaque rerum nostrum aliquid obcaecati odio
+                            officia deleniti. Expedita iste et illum, quaerat pariatur consequatur
+                            eum nihil itaque!
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <p class="card-title">Product Name</p>
+                        <p class="small-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
+                            veritatis nobis saepe itaque rerum nostrum aliquid obcaecati odio
+                            officia deleniti. Expedita iste et illum, quaerat pariatur consequatur
+                            eum nihil itaque!
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <p class="card-title">Product Name</p>
+                        <p class="small-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
+                            veritatis nobis saepe itaque rerum nostrum aliquid obcaecati odio
+                            officia deleniti. Expedita iste et illum, quaerat pariatur consequatur
+                            eum nihil itaque!
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <p class="card-title">Product Name</p>
+                        <p class="small-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
+                            veritatis nobis saepe itaque rerum nostrum aliquid obcaecati odio
+                            officia deleniti. Expedita iste et illum, quaerat pariatur consequatur
+                            eum nihil itaque!
+                        </p>
+                    </div>
+                </div>
+        </section>
+
+        <section class="contact" id="contato">
+            <div class="container">
+                <div class="data">
+                    <div class="tittle">
+                        <h2>Contatos</h2>
+                    </div>
+                    <div class="description">
+                        <p>Entre em contato conosco para agendar uma consulta ou tirar dúvidas sobre nossos serviços.
+                        </p>
+                    </div>
+                    <div class="contact-container">
+                        <div class="contact-info-box">
+                             <p><strong>Endereço:</strong> Rua Exemplo, 123, Belo Horizonte, MG</p>
+                            <p><strong>Telefone:</strong> (31) 1234-5678</p>
+                            <p><strong>Email:</strong> contato@italomoreira.com.br</p>
+                            <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, 9h às 18h</p>
+
+                        </div>
+                        <button class="btn" onclick="iniciarChatWhatsApp()">
+                            <img src="img/wpp-btn.webp" alt="Whatsapp">
+                            Contato
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--  <section class="stats" id="numeros">
+            <h2>Resultados</h2>
+       
+        </section>
+
+        <section class="testimonials" id="comentarios">
+            <h2>O que dizem nossos clientes</h2>
+       
+        </section> -->
+    </main>
+
+    <!-- <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://www.twitter.com" target="_blank"><img src="img/twitter-icon.svg" alt="Twitter"></a>
+                <a href="https://www.linkedin.com" target="_blank"><img src="img/linkedin-icon.svg" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="img/instagram-icon.svg" alt="Instagram"></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="img/facebook-icon.svg" alt="Facebook"></a>
+            </div>
+            <p>&copy; 2025 Italo Moreira. Todos os direitos reservados.</p>
+        </div>
+    </footer> -->
+
+
+</body>
+
+</html>
