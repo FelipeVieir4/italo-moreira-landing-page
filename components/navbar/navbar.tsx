@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "./navbar.styles.css";
+import { handleHamburguerMenu } from "./navbar.script.js";
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,30 +19,28 @@ const Navbar: React.FC = () => {
     ];
 
     return (
-        <nav className="bg-muted min-h-20 flex justify-center items-center shadow-md">
-            <div className="container mx-auto flex justify-between items-center p-4">
-                <div>
-                    <a href="#home">
-                        <div className="uppercase flex items-center gap-4">
-                            <h1 className="text-2xl font-primary font-bold">Italo Moreira</h1>
-                            <p className="border-l border-primary pl-3">Advocacia</p>
-                        </div>
-                    </a>
-                </div>
+        <nav className="navbar-container ">
+            <div className="navbar-logo">
+                <img src="./logo/logo.svg" alt="Italo Moreira Advocacia" />
+                <a href="#home">
+                    <div className="logo-text">
+                        <p>Italo Moreira</p>
+                        <p>Advocacia</p>
+                    </div>
+                </a>
+            </div>
 
-                <span className="block md:hidden text-2xl cursor-pointer" onClick={toggleMenu}>
-                    &#9776;
-                </span>
 
-                <div className={`md:flex ${isOpen ? "block" : "hidden"} flex-col md:flex-row md:items-center`}>
-                    <ul className="flex flex-col md:flex-row gap-4 uppercase">
-                        {menuItems.map((item) => (
-                            <li key={item.label} className="font-secondary hover:bg-primary hover:text-muted hover:cursor-pointer p-2 rounded-md transition duration-300">
-                                <a href={item.href}>{item.label}</a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+
+            <span className="navbar-toggle-icon" aria-label="Menu" onClick={handleHamburguerMenu}>&#9776;</span>
+
+
+            <div className="navbar-menu" onClick={handleHamburguerMenu}>
+                <ul className="navbar-links">
+                    {menuItems.map((item, index) => (
+                        <li key={index}><a href={item.href}>{item.label}</a></li>
+                    ))}
+                </ul>
             </div>
         </nav>
     );
