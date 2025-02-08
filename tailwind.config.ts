@@ -14,6 +14,7 @@ export default {
         textPrimary: "#F9F9F9",   // Branco (Texto Principal)
         textSecondary: "#020136", // Azul Escuro Profundo (Texto Secundário)
         highlight: "#C9A349",     // Dourado (Destaque)
+        highlightDark: "#A17E2A", // Dourado Escuro (Destaque Escuro)
         muted: "#FFFFFF"          // Branco (Cor Suave / Neutra)
       },
       fontFamily: {

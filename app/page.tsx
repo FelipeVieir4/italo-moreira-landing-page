@@ -4,7 +4,7 @@ import HeroSection from "./_sections-landing-pages/hero/hero-section";
 
 export default function Home() {
   return (
-    <div>
+    <div className="h-screen w-screen">
       <Navbar />
       <HeroSection />
     </div>

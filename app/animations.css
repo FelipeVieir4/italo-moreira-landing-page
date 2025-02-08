@@ -1,0 +1,522 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.slide-out {
+  animation: slideOut 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.zoom-out {
+  animation: zoomOut 1s ease-in-out;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.bounce {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.pulse {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0);
+  }
+
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+.flip {
+  animation: flip 1s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-10px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  75% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes wobble {
+
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
+.wobble {
+  animation: wobble 1s ease-in-out;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-down {
+  animation: slideDown 1s ease-in-out;
+}
+
+@keyframes erase {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.erase {
+  animation: erase 1s ease-in-out;
+}
+
+@keyframes swing {
+
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(15deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
+.swing {
+  animation: swing 1s ease-in-out;
+}
+
+@keyframes hinge {
+  0% {
+    transform: rotate(0);
+  }
+
+  20% {
+    transform: rotate(20deg);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  60% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(0);
+    transform-origin: bottom left;
+  }
+}
+
+.hinge {
+  animation: hinge 1s ease-in-out;
+}
+
+@keyframes flash {
+
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  animation: flash 1s ease-in-out;
+}
+
+@keyframes jello {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-10px) skewX(-10deg);
+  }
+
+  50% {
+    transform: translateX(10px) skewX(10deg);
+  }
+
+  75% {
+    transform: translateX(-5px) skewX(-5deg);
+  }
+}
+
+.jello {
+  animation: jello 1s ease-in-out;
+}
+
+@keyframes heartBeat {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.heart-beat {
+  animation: heartBeat 1s ease-in-out;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.roll {
+  animation: roll 1s ease-in-out;
+}
+
+@keyframes pulseColor {
+
+  0%,
+  100% {
+    background-color: #ff0000;
+  }
+
+  50% {
+    background-color: #00ff00;
+  }
+}
+
+.pulse-color {
+  animation: pulseColor 1s ease-in-out infinite;
+}
+
+@keyframes tada {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+.tada {
+  animation: tada 1s ease-in-out;
+}
+
+@keyframes shakeX {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-10px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  75% {
+    transform: translateX(-10px);
+  }
+}
+
+.shake-x {
+  animation: shakeX 0.5s ease-in-out;
+}
+
+@keyframes shakeY {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  75% {
+    transform: translateY(-10px);
+  }
+}
+
+.shake-y {
+  animation: shakeY 0.5s ease-in-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(100%);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounce-in {
+  animation: bounceIn 1s ease-in-out;
+}
+
+@keyframes flashIn {
+
+  0%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+
+  25%,
+  75% {
+    opacity: 1;
+  }
+}
+
+.flash-in {
+  animation: flashIn 1s ease-in-out;
+}
+
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-in-top {
+  animation: slideInTop 1s ease-in-out;
+}
+
+@keyframes slideInBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-in-bottom {
+  animation: slideInBottom 1s ease-in-out;
+}
+
+.delay-0s5 {
+  animation-delay: 0.5s;
+}
+
+.delay-1s {
+  animation-delay: 1s;
+}
+
+.delay-1s5 {
+  animation-delay: 1.5s;
+}
+
+.delay-1s75 {
+  animation-delay: 1.75s;
+}
+
+
+.delay-2s {
+  animation-delay: 2s;
+}
+
+.delay-2s5 {
+  animation-delay: 2.5s;
+}

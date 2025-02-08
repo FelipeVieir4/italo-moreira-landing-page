@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <nav className="navbar bg-primary h-[10vh] flex items-center justify-between px-[10%]">
+        <nav className="navbar bg-primary h-[10vh] flex items-center justify-between px-[10%] shadow-xl z-50 sticky top-0">
             {/* Logo e Nome */}
             <div className="h-full flex items-center gap-4">
                 <Image width={50} height={50} src={menuLogo} alt="Italo Moreira Advocacia" />
@@ -57,10 +57,13 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Menu Mobile */}
-            <div className={`xl:hidden ${isMenuOpen ? '' : 'hidden'} navbar-links h-[90vh] w-1/2 bg-secondary absolute block navbar-links right-0 top-[10vh] uppercase  `} onClick={handleHamburguerMenu}>
+            <div
+                className={`xl:hidden ${isMenuOpen ? 'opacity-100 visibility-visible' : 'opacity-0 visibility-hidden translate-x-full'} navbar-links h-[90vh] w-2/3 bg-secondary absolute right-0 top-[10vh] uppercase transition-all duration-300 ease-in-out`}
+                onClick={handleHamburguerMenu}
+            >
                 <ul className="flex flex-col justify-evenly items-center h-full">
                     {menuItems.map((item, index) => (
-                        <li key={index}  >
+                        <li key={index}>
                             <a href={item.href} className="hover:text-gray-600 transition text-highlight w-full text-center tracking-widest">
                                 {item.label}
                             </a>
@@ -68,6 +71,7 @@ const Navbar: React.FC = () => {
                     ))}
                 </ul>
             </div>
+
         </nav>
     );
 };
