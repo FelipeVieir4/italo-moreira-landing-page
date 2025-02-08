@@ -4,14 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&family=Plus+Jakarta+Sans:wght@200;800&display=swap');
 
 :root {
-  --primary: #003366; /* Azul Marinho (Fundo principal) */
-  --secondary: #1a242e; /* Cinza Chumbo (Seções alternadas) */
-  --text-primary: #F9F9F9; /* Branco Neve (Texto principal) */
-  --text-secondary: #1a242e; /* Cinza Chumbo (Texto secundário) */
-  --highlight: #C9A349; /* Dourado Suave (Destaques e botões) */
-  --muted: #FFFFFF; /* Branco */
-  --light-background: #FFFFFF;
-  --text-color: #003366;
+  --primary: #020136; 
+  --secondary: #2c2c2c; 
+  --text-primary: #F9F9F9; 
+  --text-secondary: #020136; 
+  --highlight: #C9A349; 
+  --muted: #FFFFFF; 
   --font-family-primary: "Plus Jakarta Sans", serif;
   --font-family-secondary: "Playfair Display", serif;
 }
