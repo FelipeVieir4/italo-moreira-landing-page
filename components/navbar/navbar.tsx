@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
 
             {/* Menu Mobile */}
             <div
-                className={`xl:hidden ${isMenuOpen ? 'opacity-100 visibility-visible' : 'opacity-0 visibility-hidden translate-x-full'} navbar-links h-[90vh] w-2/3 bg-secondary absolute right-0 top-[10vh] uppercase transition-all duration-300 ease-in-out`}
+                className={` xl:hidden ${isMenuOpen ? 'menu-slide-in' : ' menu-slide-out'} navbar-links h-[90vh] w-2/3 bg-secondary absolute right-0 top-[10vh] uppercase transition-all duration-300 ease-in-out`}
                 onClick={handleHamburguerMenu}
             >
                 <ul className="flex flex-col justify-evenly items-center h-full">
