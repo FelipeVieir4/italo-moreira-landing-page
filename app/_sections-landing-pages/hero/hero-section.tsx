@@ -1,5 +1,7 @@
+'use client';
 import React from 'react';
 import './hero-section.styles.css';
+import {iniciarChatWhatsApp} from  '../../../utils/waapi/waapi';
 
 const HeroSection: React.FC = () => {
     return (
@@ -20,7 +22,7 @@ const HeroSection: React.FC = () => {
                     Nossa equipe especializada está pronta para defender seus direitos com compromisso e integridade.
                 </p>
                 {/* Botão de ação */}
-                <a href="#contact" className=" fade-in delay-1s mt-6 bg-highlight text-white py-2 px-6 rounded-lg text-lg font-medium hover:bg-highlightDark transition-colors">
+                <a onClick={iniciarChatWhatsApp} className=" fade-in delay-1s mt-6 bg-highlight text-white py-2 px-6 rounded-lg text-lg font-medium hover:bg-highlightDark transition-colors cursor-pointer">
                     Agende uma Consulta
                 </a>
             </div>
