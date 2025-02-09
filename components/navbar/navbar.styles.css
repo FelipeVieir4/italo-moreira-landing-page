@@ -22,13 +22,11 @@
 @keyframes slideIn {
     0% {
         transform: translateX(100%);
-        /* Começa fora da tela à direita */
         opacity: 0;
     }
 
     100% {
         transform: translateX(0);
-        /* Termina na posição original */
         opacity: 1;
 
     }
@@ -52,7 +50,6 @@
 
 /* Classe para o menu quando está aberto */
 .menu-slide-in {
-    transform: translateX(100%);
     animation: slideIn 0.5s ease-in-out forwards;
 }
 
