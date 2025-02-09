@@ -1,60 +1,54 @@
 .navbar-links a {
-    padding: 1rem;
-    background-color: transparent;
-    margin: 1rem;
-    font-size: 1rem;
-    transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 1rem;
+  background-color: transparent;
+  margin: 1rem;
+  font-size: 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .navbar-links a:hover {
-    background-color: var(--highlight);
-    border-radius: 0.5rem;
+  background-color: var(--highlight);
+  border-radius: 0.5rem;
 }
 
 .navbar-links a:focus,
 .navbar-links a:active {
-    background-color: var(--highlight);
-    border-radius: 10px;
-
+  background-color: var(--highlight);
+  border-radius: 10px;
 }
 
-/* Defina a animação de entrada */
 @keyframes slideIn {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
+  0% {
+    display: absolute;
+    transform: translateX(100%);
+    opacity: 0;
+  }
 
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-
-    }
+  100% {
+    display: absolute;
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
-
-/* Defina a animação de saída */
 @keyframes slideOut {
-    0% {
-        transform: translateX(0);
-        /* Começa na posição original */
-        opacity: 1;
-    }
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 
-    100% {
-        transform: translateX(100%);
-        /* Sai para fora da tela à direita */
-        opacity: 0;
-        display: none;
-    }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+    display: none;
+  }
 }
 
-/* Classe para o menu quando está aberto */
 .menu-slide-in {
-    animation: slideIn 0.5s ease-in-out forwards;
+ 
+  animation: slideIn 0.5s ease-in-out forwards;
 }
 
-/* Classe para o menu quando está fechado */
 .menu-slide-out {
-    transform: translateX(0%);
-    animation: slideOut 0.5s ease-in-out forwards;
+  animation: slideOut 0.5s ease-in-out forwards;
 }
+

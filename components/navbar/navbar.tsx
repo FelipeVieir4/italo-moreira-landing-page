@@ -28,9 +28,9 @@ const Navbar: React.FC = () => {
             <div className="h-full flex items-center gap-4">
                 <Image width={50} height={50} src={menuLogo} alt="Italo Moreira Advocacia" />
                 <a href="#home">
-                    <div className="flex uppercase gap-4 items-center text-2xl ">
+                    <div className="flex  gap-4 items-center text-2xl ">
                         {menuText.map((text, index) => (
-                            <p key={index} className="text-textPrimary last:border-l-2 border-gray-300 last:pl-4 last:text-lg last:hidden sm:last:block">
+                            <p key={index} className="text-textPrimary last:border-l-2 border-gray-300 last:pl-4 last:text-lg last:hidden sm:last:block uppercase font-primary">
                                 {text}
                             </p>
                         ))}
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
                 <ul className="flex">
                     {menuItems.map((item, index) => (
                         <li key={index}>
-                            <a href={item.href} className="text-textPrimary">
+                            <a href={item.href} className="text-textPrimary font-secondary">
                                 {item.label}
                             </a>
                         </li>
@@ -58,13 +58,13 @@ const Navbar: React.FC = () => {
 
             {/* Menu Mobile */}
             <div
-                className={` xl:hidden ${isMenuOpen ? 'menu-slide-in' : ' menu-slide-out'} navbar-links h-[90vh] w-full bg-secondary fixed right-0 top-[10vh] uppercase transition-all duration-300 ease-in-out z-10`}
+                className={`xl:hidden ${isMenuOpen ? 'menu-slide-in' : 'menu-slide-out'}  navbar-links h-[90vh] w-full bg-secondary fixed right-0 top-[10vh] uppercase  z-10`}
                 onClick={handleHamburguerMenu}
             >
                 <ul className="flex flex-col justify-evenly items-center h-full">
                     {menuItems.map((item, index) => (
                         <li key={index}>
-                            <a href={item.href} className="hover:text-gray-600 transition text-highlight w-full text-center tracking-widest">
+                            <a href={item.href} className="hover:text-gray-600 transition text-highlight w-full text-center tracking-widest font-secondary ">
                                 {item.label}
                             </a>
                         </li>

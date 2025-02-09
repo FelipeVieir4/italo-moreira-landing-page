@@ -18,8 +18,9 @@ export default {
         muted: "#FFFFFF"          // Branco (Cor Suave / Neutra)
       },
       fontFamily: {
-        primary: ["Plus Jakarta Sans", "serif"],
-        secondary: ["Playfair Display", "serif"],
+        primary: ["Playfair Display", "serif"],
+        secondary: ["Plus Jakarta Sans", "serif"],
+
       },
     },
   },
