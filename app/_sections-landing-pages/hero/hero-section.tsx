@@ -5,7 +5,8 @@ import {iniciarChatWhatsApp} from  '../../../utils/waapi/waapi';
 
 const HeroSection: React.FC = () => {
     return (
-        <div className="relative h-[75vh] w-full">
+            <section id='home'>
+                <div className="relative h-[75vh] w-full">
             {/* Background image */}
             <div className="absolute top-0 left-0 w-full h-full">
                 <img src="./hero/hero-bg-img3.jpg" alt="Imagem de fundo" className="object-cover w-full h-full" />
@@ -27,6 +28,7 @@ const HeroSection: React.FC = () => {
                 </a>
             </div>
         </div>
+            </section>
     );
 };
 
