@@ -11,7 +11,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/footer/twitter-icon.svg"
+              src="./footer/twitter-icon.svg"
               alt="Twitter"
               className="w-6 h-6 hover:opacity-75"
             />
@@ -22,7 +22,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/footer/linkedin-icon.svg"
+              src="./footer/linkedin-icon.svg"
               alt="LinkedIn"
               className="w-6 h-6 hover:opacity-75"
             />
@@ -33,7 +33,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/footer/instagram-icon.svg"
+              src="./footer/instagram-icon.svg"
               alt="Instagram"
               className="w-6 h-6 hover:opacity-75"
             />
@@ -44,7 +44,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/footer/facebook-icon.svg"
+              src="./footer/facebook-icon.svg"
               alt="Facebook"
               className="w-6 h-6 hover:opacity-75"
             />
