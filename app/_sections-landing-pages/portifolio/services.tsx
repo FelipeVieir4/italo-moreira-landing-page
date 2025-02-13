@@ -68,10 +68,10 @@ const services = [
 
 const ServicesSection: React.FC = () => {
     return (
-        <section id="services">
+        <section id="services" >
             <div className="bg-muted px-2 py-10">
                 <div id="features" className="mx-auto max-w-6xl">
-                    <h2 className=" mt-[5vh] text-center font-primary uppercase text-3xl font-bold tracking-wide text-highlight md:text-4xl">
+                    <h2 className="  text-center font-primary uppercase text-3xl font-bold tracking-wide text-highlight md:text-4xl">
                         Serviços Juridicos
                     </h2>
                     <ul className="mt-16 grid grid-cols-1 gap-6 text-center text-secondary md:grid-cols-3 justify-items-center">

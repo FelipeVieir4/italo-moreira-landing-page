@@ -4,6 +4,7 @@ import HeroSection from "./_sections-landing-pages/hero/hero-section";
 import ServicesSection from "./_sections-landing-pages/portifolio/services";
 import Testimonials from "./_sections-landing-pages/testimonials/testimonials";
 import Footer from "./_sections-landing-pages/footer/footer";
+import ProfileSection from "./_sections-landing-pages/profile/profile";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection/>
       <Testimonials/>
+      <ProfileSection/>
       <Footer/>
     </div>
   );
