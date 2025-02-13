@@ -76,7 +76,7 @@ const ServicesSection: React.FC = () => {
                     </h2>
                     <ul className="mt-16 grid grid-cols-1 gap-6 text-center text-secondary md:grid-cols-3 justify-items-center">
                       {services.map((service, index) => (
-                        <li key={index} className="max-w-60 md:max-w-full cursor-pointer rounded-xl bg-muted px-6 py-8 hover:bg-primary hover:text-muted shadow-lg transition-colors duration-300">
+                        <li key={index} className="max-w-full cursor-pointer rounded-xl bg-muted px-6 py-8 hover:bg-primary hover:text-muted shadow-lg transition-colors duration-300">
                           <Image width={service.image.width} height={service.image.height} src={service.image.src} alt={service.image.alt} className="mx-auto h-10 w-10" />
                           <h3 className="my-3 font-display font-bold">{service.title}</h3>
                           <p className="mt-1.5 text-sm leading-6  font-secondary">
