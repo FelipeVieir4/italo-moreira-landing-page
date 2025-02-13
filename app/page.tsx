@@ -1,14 +1,18 @@
 import React from "react";
 import Navbar from "@/components/navbar/navbar";
 import HeroSection from "./_sections-landing-pages/hero/hero-section";
-import ServicesSection from "./_sections-landing-pages/servicos/services";
+import ServicesSection from "./_sections-landing-pages/portifolio/services";
+import Testimonials from "./_sections-landing-pages/testimonials/terimonials";
+import Footer from "./_sections-landing-pages/footer/footer";
 
 export default function Home() {
   return (
-    <div className="h-screen w-screen">
+    <div className=" max-w-full h-screen w-screen">
       <Navbar />
       <HeroSection />
       <ServicesSection/>
+      <Testimonials/>
+      <Footer/>
     </div>
   );
 }

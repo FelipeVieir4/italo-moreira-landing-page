@@ -74,16 +74,16 @@ const ServicesSection: React.FC = () => {
                     <h2 className=" mt-[5vh] text-center font-primary uppercase text-3xl font-bold tracking-wide text-textSecondary md:text-4xl">
                         Serviços Juridicos
                     </h2>
-                    <ul className="mt-16 grid grid-cols-1 gap-6 text-center text-secondary md:grid-cols-3">
-                        {services.map((service, index) => (
-                            <li key={index} className="cursor-pointer rounded-xl bg-muted px-6 py-8  hover:bg-primary hover:text-muted shadow-lg transition-colors duration-300">
-                                <Image width={service.image.width} height={service.image.height} src={service.image.src} alt={service.image.alt} className="mx-auto h-10 w-10" />
-                                <h3 className="my-3 font-display font-medium">{service.title}</h3>
-                                <p className="mt-1.5 text-sm leading-6 text-secondary-500">
-                                    {service.description}
-                                </p>
-                            </li>
-                        ))}
+                    <ul className="mt-16 grid grid-cols-1 gap-6 text-center text-secondary md:grid-cols-3 justify-items-center">
+                      {services.map((service, index) => (
+                        <li key={index} className="max-w-60 md:max-w-full cursor-pointer rounded-xl bg-muted px-6 py-8 hover:bg-primary hover:text-muted shadow-lg transition-colors duration-300">
+                          <Image width={service.image.width} height={service.image.height} src={service.image.src} alt={service.image.alt} className="mx-auto h-10 w-10" />
+                          <h3 className="my-3 font-display font-medium">{service.title}</h3>
+                          <p className="mt-1.5 text-sm leading-6 text-secondary-500">
+                            {service.description}
+                          </p>
+                        </li>
+                      ))}
                     </ul>
                 </div>
             </div>
