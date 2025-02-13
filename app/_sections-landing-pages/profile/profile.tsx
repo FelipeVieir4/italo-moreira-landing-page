@@ -9,7 +9,7 @@ const ProfileSection: React.FC = () => {
       {/* Background Image */}
       <div className="absolute inset-0 -z-10 h-full w-full ">
         <Image
-          src="/profile/law-office-bg.jpg"
+          src="./profile/law-office-bg.jpg"
           alt="Escritório de advocacia"
           layout="fill"
           objectFit="cover"
