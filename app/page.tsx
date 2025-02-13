@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "@/components/navbar/navbar";
 import HeroSection from "./_sections-landing-pages/hero/hero-section";
 import ServicesSection from "./_sections-landing-pages/portifolio/services";
-import Testimonials from "./_sections-landing-pages/testimonials/terimonials";
+import Testimonials from "./_sections-landing-pages/testimonials/testimonials";
 import Footer from "./_sections-landing-pages/footer/footer";
 
 export default function Home() {

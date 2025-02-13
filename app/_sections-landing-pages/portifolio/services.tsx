@@ -71,15 +71,15 @@ const ServicesSection: React.FC = () => {
         <section id="services">
             <div className="bg-muted px-2 py-10">
                 <div id="features" className="mx-auto max-w-6xl">
-                    <h2 className=" mt-[5vh] text-center font-primary uppercase text-3xl font-bold tracking-wide text-textSecondary md:text-4xl">
+                    <h2 className=" mt-[5vh] text-center font-primary uppercase text-3xl font-bold tracking-wide text-highlight md:text-4xl">
                         Serviços Juridicos
                     </h2>
                     <ul className="mt-16 grid grid-cols-1 gap-6 text-center text-secondary md:grid-cols-3 justify-items-center">
                       {services.map((service, index) => (
                         <li key={index} className="max-w-60 md:max-w-full cursor-pointer rounded-xl bg-muted px-6 py-8 hover:bg-primary hover:text-muted shadow-lg transition-colors duration-300">
                           <Image width={service.image.width} height={service.image.height} src={service.image.src} alt={service.image.alt} className="mx-auto h-10 w-10" />
-                          <h3 className="my-3 font-display font-medium">{service.title}</h3>
-                          <p className="mt-1.5 text-sm leading-6 text-secondary-500">
+                          <h3 className="my-3 font-display font-bold">{service.title}</h3>
+                          <p className="mt-1.5 text-sm leading-6  font-secondary">
                             {service.description}
                           </p>
                         </li>

@@ -17,9 +17,7 @@
   border-radius: 10px;
 }
 
-.mobile-menu {
-  display: none;
-}
+
 
 @keyframes slideIn {
   0% {
