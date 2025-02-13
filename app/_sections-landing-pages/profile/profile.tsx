@@ -6,10 +6,10 @@ import { iniciarChatWhatsApp } from "../../../utils/waapi/waapi";
 const ProfileSection: React.FC = () => {
   return (
     <section id="profile">
-      <div className="bg-muted px-2 py-10">
+      <div className="bg-muted px-2 py-10 ">
         <div className=" mx-auto max-w-6xl">
           <div className="text-center font-primary text-3xl sm:text-4xl font-bold uppercase tracking-wide mb-10">
-            <h2 className="inline-block border-highlight pb-1">Sobre o</h2>{" "}
+            <h2 className="inline-block text-primary">Sobre o</h2>{" "}
             <h2 className="text-highlight inline-block">Dr. Italo Moreira</h2>
           </div>
 
