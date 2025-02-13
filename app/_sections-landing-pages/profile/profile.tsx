@@ -22,7 +22,7 @@ const ProfileSection: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 justfy-center items-center gap-10">
             <div className=" w-full flex justify-center lg:justify-end">
               <Image
-                src="/profile/model-bg.png"
+                src="./profile/model-bg.png"
                 alt="Foto do Dr. Italo Moreira"
                 layout="responsive"
                 width={500}
