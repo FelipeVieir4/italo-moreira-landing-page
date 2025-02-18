@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 const menuItems = [
-    { href: "#home", label: "Início" },
+    { href: "#", label: "Início" },
     { href: "#services", label: "Serviços" },
     { href: "#testimonials", label: "Depoimentos" },
     { href: "#contato", label: "Contato" },
@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
             {/* Logo e Nome */}
             <div className="h-full flex items-center gap-4">
                 <Image width={50} height={50} src={menuLogo} alt="Italo Moreira Advocacia" />
-                <a href="#home">
+                <a href="#">
                     <div className="flex  gap-4 items-center text-2xl ">
                         {menuText.map((text, index) => (
                             <p key={index} className="text-textPrimary last:border-l-2 border-gray-300 last:pl-4 last:text-lg last:hidden sm:last:block uppercase font-primary">

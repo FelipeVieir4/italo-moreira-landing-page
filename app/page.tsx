@@ -12,8 +12,8 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <ServicesSection/>
-      <Testimonials/>
       <ProfileSection/>
+      <Testimonials/>
       <Footer/>
     </div>
   );
