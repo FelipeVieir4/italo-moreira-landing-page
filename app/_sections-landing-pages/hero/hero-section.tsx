@@ -29,10 +29,12 @@ const HeroSection: React.FC = () => {
           {/* Botão de ação */}
           <a
             onClick={iniciarChatWhatsApp}
-            className=" fade-in delay-1s mt-6 bg-highlight text-white py-2 px-6 rounded-lg text-lg font-secondary hover:bg-highlightDark transition-colors cursor-pointer"
+            className=" fade-in delay-1s mt-6 bg-highlight text-white py-3 px-6 rounded-lg text-lg font-secondary hover:bg-highlightDark transition-colors cursor-pointer"
           >
             Agende uma Consulta
           </a>
+
+       
         </div>
       </div>
     </section>

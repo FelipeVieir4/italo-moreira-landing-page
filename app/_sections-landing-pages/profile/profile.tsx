@@ -25,7 +25,7 @@ const ProfileSection: React.FC = () => {
 
       {/* Container principal */}
       <div className="bg-primary bg-opacity-60 flex flex-wrap justify-center items-center max-w-screen-xl w-full gap-10 p-8 rounded-lg shadow-lg">
-        <div className="flex justify-center w-full sm:w-auto border-4 border-secondary rounded-lg overflow-hidden  shadow-lg"> 
+        <div className="bg-gray-500 flex justify-center w-full sm:w-auto border-4 border-secondary rounded-lg overflow-hidden  shadow-lg"> 
           <Image
             src="./profile/model-bg.png"
             alt="Foto do Dr. Italo Moreira"
@@ -35,10 +35,10 @@ const ProfileSection: React.FC = () => {
           />
         </div>
         <div className="text-white w-full sm:w-2/3 flex flex-col justify-center items-center text-center sm:text-left">
-          <p className="text-lg text-textPrimary leading-relaxed font-secondary mb-4">
+          <p className="text-sm md:text-lg text-textPrimary leading-relaxed font-secondary mb-4">
             O Dr. Italo Moreira é um profissional altamente qualificado, com anos de experiência no setor. Seu compromisso é fornecer serviços de excelência, garantindo a satisfação total de seus pacientes.
           </p>
-          <p className="text-lg text-textPrimary leading-relaxed font-secondary mb-6">
+          <p className="text-sm md:text-lg text-textPrimary leading-relaxed font-secondary mb-6">
             Sempre atualizado com as últimas tendências e tecnologias do mercado, ele garante que seus serviços sejam modernos e eficientes. Seu compromisso com a ética profissional e a excelência o torna a escolha ideal para o seu cuidado.
           </p>
           <button
