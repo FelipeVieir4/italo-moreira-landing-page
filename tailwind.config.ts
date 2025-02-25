@@ -9,10 +9,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#020136",       // Azul Escuro Profundo (Cor Principal)
+        primary: "#101828",       // Azul Escuro Profundo (Cor Principal)
         secondary: "#1a242e",     // Azul Acinzentado (Cor Secundária)
         textPrimary: "#F9F9F9",   // Branco (Texto Principal)
-        textSecondary: "#020136", // Azul Escuro Profundo (Texto Secundário)
+        textSecondary: "#101828", // Azul Escuro Profundo (Texto Secundário)
         highlight: "#C9A349",     // Dourado (Destaque)
         highlightDark: "#A17E2A", // Dourado Escuro (Destaque Escuro)
         muted: "#FFFFFF"          // Branco (Cor Suave / Neutra)

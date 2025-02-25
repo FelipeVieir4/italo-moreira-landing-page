@@ -8,8 +8,8 @@ const menuItems = [
     { href: "#services", label: "Serviços" },
     { href: "#testimonials", label: "Depoimentos" },
     { href: "#contato", label: "Contato" },
-    { href: "#numeros", label: "Números" },
-    { href: "#mais", label: "Mais" },
+    { href: "#numeros", label: "Mídia" },
+    // { href: "#mais", label: "Mais" },
 ];
 const menuText = ["Italo Moreira", "Advocacia"];
 const menuLogo = "./logo/logo-balance.svg";
