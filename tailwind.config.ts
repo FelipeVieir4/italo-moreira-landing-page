@@ -9,13 +9,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#101828",       // Azul Escuro Profundo (Cor Principal)
-        secondary: "#1a242e",     // Azul Acinzentado (Cor Secundária)
-        textPrimary: "#F9F9F9",   // Branco (Texto Principal)
-        textSecondary: "#101828", // Azul Escuro Profundo (Texto Secundário)
-        highlight: "#C9A349",     // Dourado (Destaque)
-        highlightDark: "#A17E2A", // Dourado Escuro (Destaque Escuro)
-        muted: "#FFFFFF"          // Branco (Cor Suave / Neutra)
+        "primary": "var(--primary)",       // Azul Escuro Profundo (Cor Principal)
+        "secondary": "var(--secondary)",     // Azul Acinzentado (Cor Secundária)
+        "textPrimary": "var(--text-primary)",   // Branco (Texto Principal)
+        "textSecondary": "var(--text-secondary)", // Azul Escuro Profundo (Texto Secundário)
+        "highlight": "var(--highlight)",     // Dourado (Destaque)
+        "highlightDark": "var(--highlight-dark)", // Dourado Escuro (Destaque Escuro)
+        "muted": "var(--muted)"          // Branco (Cor Suave / Neutra)
       },
       fontFamily: {
         primary: ["Playfair Display", "serif"],

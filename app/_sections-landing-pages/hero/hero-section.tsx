@@ -16,8 +16,13 @@ const HeroSection: React.FC = () => {
           />
         </div>
 
+        <div className="absolute top-0 left-0 w-full h-full  bg-gray-900 opacity-70">
+        
+        </div>
+
+
         {/* Overlay com transparência e texto */}
-        <div className="absolute top-0 left-0 w-full h-full bg-primary bg-opacity-80 flex flex-col justify-center items-center">
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
           {/* Título */}
           <h1 className=" uppercase fade-in font-primary text-white text-4xl xl:text-6xl md:text-5xl font-semibold text-center leading-tight px-4 tracking-wider">
             advocacia especializada
