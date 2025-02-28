@@ -1,12 +1,11 @@
 "use client";
 import React from "react";
-import "./hero-section.styles.css";
 import { iniciarChatWhatsApp } from "../../../utils/waapi/waapi";
 
 const HeroSection: React.FC = () => {
   return (
     <section id="home">
-      <div className="relative h-[75vh] w-full">
+      <div className="relative h-[65vh] w-full">
         {/* Background image */}
         <div className="absolute top-0 left-0 w-full h-full">
           <img
