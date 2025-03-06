@@ -12,7 +12,7 @@ const menuItems = [
     // { href: "#mais", label: "Mais" },
 ];
 const menuText = ["Italo Moreira", "Advocacia"];
-const menuLogo = "./logo/logo-balance.svg";
+const menuLogo = "./logo/logo-white.png";
 const openIcon = "./icons/openIcon.svg";
 const closeIcon = "./icons/closeIcon.svg";
 
