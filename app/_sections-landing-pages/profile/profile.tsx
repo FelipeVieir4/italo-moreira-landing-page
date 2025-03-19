@@ -6,7 +6,7 @@ import { iniciarChatWhatsApp } from "../../../utils/waapi/waapi";
 const ProfileSection: React.FC = () => {
   return (
     <section
-      id="profile"
+      id="about"
       className="relative min-h-[60vh] w-full flex items-center justify-center py-10 px-5"
     >
       {/* Background Image */}

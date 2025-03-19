@@ -7,8 +7,8 @@ const menuItems = [
     { href: "#", label: "Início" },
     { href: "#services", label: "Serviços" },
     { href: "#testimonials", label: "Depoimentos" },
-    { href: "#contato", label: "Contato" },
-    { href: "#numeros", label: "Mídia" },
+    { href: "#about", label: "Sobre" },
+    // { href: "#numeros", label: "Mídia" },
     // { href: "#mais", label: "Mais" },
 ];
 const menuText = ["Italo Moreira", "Advocacia"];
