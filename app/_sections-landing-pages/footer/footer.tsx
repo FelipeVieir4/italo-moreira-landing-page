@@ -6,17 +6,6 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 flex flex-col items-center">
         <div className="flex space-x-6 mb-4">
           <a
-            href="https://www.twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="./footer/twitter-icon.svg"
-              alt="Twitter"
-              className="w-6 h-6 hover:opacity-75"
-            />
-          </a>
-          <a
             href="https://www.linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
