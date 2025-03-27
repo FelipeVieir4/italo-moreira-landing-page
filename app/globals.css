@@ -5,12 +5,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&family=Plus+Jakarta+Sans:wght@200;800&display=swap');
 
 :root {
-  --primary: #101828; 
-  --secondary: #2c2c2c; 
+  --primary: #020617 ; 
+  --secondary: #101828; 
   --text-primary: #F9F9F9; 
   --text-secondary: #101828; 
-  --highlight: #A17E2A  ; 
-  --highlight-dark: #C9A349;
+  --highlight: #C9A349   ; 
+  --highlight-dark: #A17E2A;
   --muted: #FFFFFF; 
   --font-family-primary: "Plus Jakarta Sans", serif;
   --font-family-secondary: "Playfair Display", serif;

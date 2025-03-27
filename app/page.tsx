@@ -5,16 +5,20 @@ import ServicesSection from "./_sections-landing-pages/portifolio/services";
 import Testimonials from "./_sections-landing-pages/testimonials/testimonials";
 import Footer from "./_sections-landing-pages/footer/footer";
 import ProfileSection from "./_sections-landing-pages/profile/profile";
+import FAQSection from "./_sections-landing-pages/FAQ/faq";
 
 export default function Home() {
   return (
     <div className=" max-w-full h-screen w-screen">
-      <Navbar />
+      <div className="mb-[10vh] ">
+        <Navbar />
+      </div>
       <HeroSection />
-      <ServicesSection/>
-      <ProfileSection/>
-      <Testimonials/>
-      <Footer/>
+      <ServicesSection />
+      <ProfileSection />
+      <Testimonials />
+      <FAQSection />
+      <Footer />
     </div>
   );
 }

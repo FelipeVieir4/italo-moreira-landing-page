@@ -1,77 +1,44 @@
-import React from "react";
-import Image from "next/image";
-import "./testimonials.css";
+"use client";
+import React, { useEffect } from "react";
 
 const testimonialsData = [
   {
     id: 1,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque semper elit non pellentesque. Curabitur neque arcu, efficitur facilisis porta at, feugiat ut est. Vivamus sed dui in dui vehicula congue. Phasellus sed pellentesque nisi. Phasellus tempus bibendum massa ut tincidunt. Nam hendrerit ut tortor eget rutrum. Suspendisse facilisis ante eget fringilla auctor. Nam a odio orci. Pellentesque imperdiet quis sem",
-    name: "Jon Doe",
-    role: "DESIGNER",
-    image: "https://dummyimage.com/110x110",
+    text: `Gostaria de compartilhar minha experiência como sua cliente.
+    Desde o primeiro atendimento, fui tratado com muita atenção, profissionalismo e dedicação. 
+    Sempre esteve disponível para esclarecer minhas dúvidas e me orientou com muita paciência e clareza em cada etapa do processo.
+    Fiquei impressionado com sua eficiência e conhecimento jurídico, que fizeram toda a diferença para a resolução do meu caso. 
+    Além disso, sua estratégia bem estruturada e abordagem resolutiva me deram segurança e tranquilidade ao longo de todo o processo. 
+    Sou muito grata pelo excelente trabalho. 
+    
+    Obrigado Dr Italo!`,
+    name: "Cliente 1",
+    data: "20 de março de 2025",
   },
   {
     id: 2,
-    text: "Fusce pharetra eget augue ac condimentum. Fusce dictum ex mauris, porta semper mi malesuada dictum. Donec congue ipsum diam. Donec eu tellus laoreet, iaculis mi sit amet, ultricies nulla. Maecenas orci metus, gravida et sodales eget, varius nec nibh. Suspendisse eget lorem blandit, sodales est eget, efficitur erat. Pellentesque feugiat velit in ante tincidunt, sed fringilla dui dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sit amet ipsum viverra, bibendum odio vel, tempus arcu.",
-    name: "Jane Doe",
-    role: "DESIGNER",
-    image: "https://dummyimage.com/110x110",
+    text: `Um profissional dedicado e muito atencioso. Me deixou a par de todas as etapas e evoluções do processo de maneira clara e objetiva. Recomendo!`,
+    name: "Cliente 2",
+    data: "18 de março de 2025",
   },
+
   {
     id: 3,
-    text: "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.",
-    name: "Alice Smith",
-    role: "DEVELOPER",
-    image: "https://dummyimage.com/110x110",
+    text: `Poder contar com o Dr. Italo durante o meu processo foi a melhor escolha que fiz. Ótima assessoria, se prontificou a tirar dúvidas, se apresenta disponível para somar com seus clientes, atencioso e demonstra claramente seu comprometimento profissional. Hoje sei com quem posso contar se precisar. Somente agradecer e lhe indicar para aqueles que precisam do seu trabalho. Muito obrigada por tudo.`,
+    name: "Cliente 3",
+    data: "01 de fevereiro de 2025",
   },
   {
     id: 4,
-    text: "Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod.",
-    name: "Bob Johnson",
-    role: "MANAGER",
-    image: "https://dummyimage.com/110x110",
+    text: `O dr Italo foi o advogado que acompanhou meu processo que durante todo o acordo foi dado a mim toda a assistência em tempo integral me mantendo informanda de todas as decisões e não ficando nenhuma dúvida sobre a decisão Muito obrigada por todo serviço prestado com excelência`,
+    name: "Cliente 4",
+    data: "17 de fevereiro de 2025",
   },
   {
     id: 5,
-    text: "Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.",
-    name: "Charlie Brown",
-    role: "ENGINEER",
-    image: "https://dummyimage.com/110x110",
-  },
-  {
-    id: 6,
-    text: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
-    name: "Diana Prince",
-    role: "ARCHITECT",
-    image: "https://dummyimage.com/110x110",
-  },
-  {
-    id: 7,
-    text: "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.",
-    name: "Eve Adams",
-    role: "DESIGNER",
-    image: "https://dummyimage.com/110x110",
-  },
-  {
-    id: 8,
-    text: "Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla.",
-    name: "Frank Wright",
-    role: "DEVELOPER",
-    image: "https://dummyimage.com/110x110",
-  },
-  {
-    id: 9,
-    text: "Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.",
-    name: "Grace Lee",
-    role: "MANAGER",
-    image: "https://dummyimage.com/110x110",
-  },
-  {
-    id: 10,
-    text: "Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.",
-    name: "Henry Ford",
-    role: "ENGINEER",
-    image: "https://dummyimage.com/110x110",
+    text: `Eu estava precisando de um advogado e não encontrava, até que encontrei o Dr. Ítalo que prontamente me atendeu, com muita atenção e humanidade. Agora tenho um advogado que me orienta e resolve minhas demandas na justiça. Estou feliz e satisfeito com o seu profissionalismo.`,
+    name: "Cliente 4",
+    data: "05 de janeiro de 2025",
   },
 ];
 
@@ -79,30 +46,39 @@ interface Testimonial {
   id: number;
   text: string;
   name: string;
-  role: string;
-  image: string;
+  data: string;
 }
 
 const getRandomTestimonials = (
   data: Testimonial[],
   count: number
 ): Testimonial[] => {
-  const shuffled = data.sort(() => 0.5 - Math.random());
+  const uniqueData = Array.from(new Set(data.map((item) => item.id))).map(
+    (id) => data.find((item) => item.id === id)!
+  );
+  const shuffled = uniqueData.sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count);
 };
 
 const Testimonials: React.FC = () => {
-  const randomTestimonials = getRandomTestimonials(testimonialsData, 2);
+  const [testimonialDisplay, setTestimonialDisplay] = React.useState<
+    Testimonial[]
+  >([]);
+
+  useEffect(() => {
+    const randomTestimonials = getRandomTestimonials(testimonialsData, 2);
+    setTestimonialDisplay(randomTestimonials);
+  }, []);
 
   return (
-    <section id="testimonials" >
-      <div className="text-primary py-10 px-2">
+    <section id="testimonials">
+      <div className="text-primary py-10 px-2 bg-primary">
         <div className="container mx-auto">
-          <h2 className=" text-center font-primary uppercase text-3xl font-bold tracking-wide text-highlight md:text-4xl mb-10">
+          {/* <h2 className=" text-center font-primary uppercase text-3xl font-bold tracking-wide text-primary md:text-4xl mb-10">
             Depoimentos
-          </h2>
+          </h2> */}
           <div className="grid md:grid-cols-2 grid-cols-1 gap-8 mt-2  ">
-            {randomTestimonials.map((testimonial) => (
+            {testimonialDisplay.map((testimonial) => (
               <div
                 key={testimonial.id}
                 className="bg-white shadow-lg rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-xl p-6"
@@ -119,19 +95,12 @@ const Testimonials: React.FC = () => {
                   {testimonial.text}
                 </p>
                 <div className="flex items-center space-x-4">
-                  <Image
-                    alt={`Imagem de ${testimonial.name}`}
-                    src={testimonial.image}
-                    width={48}
-                    height={48}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
                   <div>
                     <p className="font-medium text-sm font-secondary text-secondary">
                       {testimonial.name}
                     </p>
                     <p className="text-sm text-secondary font-secondary">
-                      {testimonial.role}
+                      {testimonial.data}
                     </p>
                   </div>
                 </div>

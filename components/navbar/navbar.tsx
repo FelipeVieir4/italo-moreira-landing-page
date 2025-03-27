@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <nav className="navbar bg-primary h-[10vh] flex items-center justify-between px-[10%] shadow-xl z-50 sticky top-0">
+        <nav className="navbar bg-primary w-full h-[10vh] flex items-center justify-between px-[10%] shadow-xl z-50 fixed top-0 ">
             {/* Logo e Nome */}
             <div className="h-full flex items-center gap-4">
                 <Image width={50} height={50} src={menuLogo} alt="Italo Moreira Advocacia" />

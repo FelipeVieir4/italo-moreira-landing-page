@@ -20,13 +20,13 @@ const ProfileSection: React.FC = () => {
         />
       </div>
 
-      <div className="absolute inset-0 -z-10 h-full w-full bg-secondary opacity-70"></div>
+      <div className="absolute inset-0 -z-10 h-full w-full bg-primary opacity-70"></div>
 
       {/* Background Image */}
       <div className="absolute inset-0 -z-10 h-full w-full "></div>
 
       {/* Container principal */}
-      <div className="bg-primary bg-opacity-60 flex flex-wrap justify-center items-center max-w-screen-xl w-full gap-10 p-8 rounded-lg shadow-lg">
+      <div className="bg-primary bg-opacity-75 flex flex-wrap justify-center items-center max-w-screen-xl w-full gap-10 p-8 rounded-lg shadow-lg">
         <div className=" flex justify-center w-full sm:w-auto border-4 border-secondary rounded-lg overflow-hidden bg-slate-300 shadow-lg">
           <Image
             src="./profile/hero-avatar2.png"

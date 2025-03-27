@@ -11,11 +11,11 @@ const HeroSection: React.FC = () => {
           <img
             src="./hero/hero-bg-img3.jpg"
             alt="Imagem de fundo"
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full "
           />
         </div>
 
-        <div className="absolute top-0 left-0 w-full h-full  bg-gray-900 opacity-70">
+        <div className="absolute top-0 left-0 w-full h-full  bg-slate-950 opacity-75">
         
         </div>
 
