@@ -14,12 +14,12 @@ const playfairDisplay = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Dr. Italo Moreira - Advogado | Advocacia Especializada  ",
-  description: "Especialista em direito civil e empresarial. Atendimento personalizado para suas necessidades jurídicas. Consulte um especialista hoje!",
+  description: "Especialista em direito civil e criminal. Atendimento personalizado para suas necessidades jurídicas. Consulte um especialista hoje!",
   keywords: [
     "Advocacia especializada",
     "Advogado Dr. Italo Moreira",
     "Direito civil",
-    "Direito empresarial",
+    "Direito criminal",
     "Consultoria jurídica",
     "Assessoria jurídica",
   ],
@@ -27,14 +27,14 @@ export const metadata: Metadata = {
   robots: "index, follow",
   openGraph: {
     title: "Advocacia Especializada | Dr. Italo Moreira",
-    description: "Especialista em direito civil e empresarial. Consulte um especialista hoje!",
-    url: "https://www.italomoreira.com",
+    description: "Especialista em direito civil e criminal. Consulte um especialista hoje!",
+    url: "https://www.italomoreira.adv.br",
     type: "website",
     siteName: "Dr. Italo Moreira Advocacia",
     locale: "pt_BR",
     images: [
       {
-        url: "https://www.italomoreira.com/og-image.jpg",
+      url: "#",
         width: 1200,
         height: 630,
         alt: "Advocacia Especializada - Dr. Italo Moreira",
@@ -43,11 +43,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@italomoreira",
-    creator: "@italomoreira",
+    site: "@",
+    creator: "@i",
     title: "Advocacia Especializada | Dr. Italo Moreira",
-    description: "Especialista em direito civil e empresarial. Consulte um especialista hoje!",
-    images: ["https://www.italomoreira.com/twitter-image.jpg"],
+    description: "Especialista em direito civil e criminal. Consulte um especialista hoje!",
+    images: ["#"],
   },
 };
 
