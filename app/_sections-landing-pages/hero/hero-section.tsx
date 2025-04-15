@@ -15,10 +15,7 @@ const HeroSection: React.FC = () => {
           />
         </div>
 
-        <div className="absolute top-0 left-0 w-full h-full  bg-slate-950 opacity-75">
-        
-        </div>
-
+        <div className="absolute top-0 left-0 w-full h-full  bg-slate-950 opacity-75"></div>
 
         {/* Overlay com transparência e texto */}
         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
@@ -27,8 +24,9 @@ const HeroSection: React.FC = () => {
             advocacia especializada
           </h1>
           {/* Subtítulo */}
-          <p className="fade-in delay-0s5 font-secondary text-white text-xl md:text-2xl mt-4 text-center px-6 max-w-2xl">
-            Serviços de Excelência para Suas Necessidades Jurídicas
+          <p className="fade-in delay-0s5 font-secondary font-thin text-white text-sm md:text-xl  mt-4 text-center px-6 max-w-4xl">
+            Nosso compromisso é oferecer tranquilidade e segurança jurídica, com
+            soluções eficientes e alinhadas aos seus direitos
           </p>
           {/* Botão de ação */}
           <a
@@ -37,8 +35,6 @@ const HeroSection: React.FC = () => {
           >
             Agende uma Consulta
           </a>
-
-       
         </div>
       </div>
     </section>

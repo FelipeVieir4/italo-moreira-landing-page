@@ -87,7 +87,7 @@ const ServicesSection: React.FC = () => {
           <h2 className="text-center font-primary uppercase text-3xl font-bold tracking-wide text-muted md:text-4xl border-b-2 border-highlight pb-4 w-fit mx-auto">
             Serviços Jurídicos
           </h2>
-          <p className="mt-4 text-center text-muted text-sm md:text-base font-thin tracking-widest">
+          <p className="mt-4 text-center text-muted text-sm md:text-base font-thin font-secondary tracking-widest">
             Conheça nossos serviços especializados para atender às suas
             necessidades jurídicas.
           </p>
