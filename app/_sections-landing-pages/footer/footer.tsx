@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 flex flex-col items-center">
         <div className="flex space-x-6 mb-4">
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/italomoreira9211/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -17,7 +17,7 @@ const Footer = () => {
             />
           </a>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/advitalomoreira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -28,7 +28,7 @@ const Footer = () => {
             />
           </a>
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/italo.henrique.94801/"
             target="_blank"
             rel="noopener noreferrer"
           >

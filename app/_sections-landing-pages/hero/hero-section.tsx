@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { iniciarChatWhatsApp } from "../../../utils/waapi/waapi";
+import ContactButton from "@/components/btn-Contact/btn-contact";
 
 const HeroSection: React.FC = () => {
   return (
@@ -28,13 +28,10 @@ const HeroSection: React.FC = () => {
             Nosso compromisso é oferecer tranquilidade e segurança jurídica, com
             soluções eficientes e alinhadas aos seus direitos
           </p>
-          {/* Botão de ação */}
-          <a
-            onClick={iniciarChatWhatsApp}
-            className=" fade-in delay-1s mt-6 bg-highlight text-white py-3 px-6 rounded-lg text-lg font-secondary hover:bg-highlightDark transition-colors cursor-pointer"
-          >
-            Agende uma Consulta
-          </a>
+
+          <div className="fade-in delay-1s flex flex-col items-center mt-6">
+            <ContactButton label="Agende uma Consulta" />
+          </div>
         </div>
       </div>
     </section>

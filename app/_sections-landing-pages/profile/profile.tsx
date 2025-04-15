@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { iniciarChatWhatsApp } from "../../../utils/waapi/waapi";
+import ContactButton from "@/components/btn-Contact/btn-contact";
 
 const ProfileSection: React.FC = () => {
   return (
@@ -45,28 +45,26 @@ const ProfileSection: React.FC = () => {
             experiência nas áreas cível, criminal e na resolução de conflitos
             extrajudiciais. Com um compromisso inabalável com a ética, oferece
             soluções jurídicas de alta qualidade, sempre buscando resultados que
-            atendam com precisão às necessidades de seus clientes. <br /><br />
+            atendam com precisão às necessidades de seus clientes. <br />
+            <br />
             Com uma abordagem moderna e estratégica, o Dr. Italo Moreira se
             mantém à frente das constantes mudanças legislativas e tendências do
             mercado jurídico, garantindo que sua atuação seja sempre embasada
             nas melhores práticas e soluções eficazes para a resolução de seus
             conflitos.
-          <br /><br />O foco é claro: entender profundamente o
-            seu caso e garantir uma resolução ágil e eficaz, com estratégias
-            personalizadas para proteger seus direitos. O Dr. Italo Moreira está
-            dedicado a proporcionar um atendimento humanizado e transparente,
-            dando-lhe a confiança necessária para que você se sinta seguro
-            durante todo o processo. Seu objetivo é não apenas resolver seu
-            conflito, mas garantir que você tenha o suporte jurídico necessário
-            para caminhar com tranquilidade.
+            <br />
+            <br />O foco é claro: entender profundamente o seu caso e garantir
+            uma resolução ágil e eficaz, com estratégias personalizadas para
+            proteger seus direitos. O Dr. Italo Moreira está dedicado a
+            proporcionar um atendimento humanizado e transparente, dando-lhe a
+            confiança necessária para que você se sinta seguro durante todo o
+            processo. Seu objetivo é não apenas resolver seu conflito, mas
+            garantir que você tenha o suporte jurídico necessário para caminhar
+            com tranquilidade.
           </p>
-          <button
-            onClick={iniciarChatWhatsApp}
-            className="flex items-center gap-2 bg-highlight text-white py-3 px-6 rounded-lg text-lg font-secondary hover:bg-highlightDark transition-all cursor-pointer shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-highlightDark"
-            aria-label="Fale comigo pelo WhatsApp"
-          >
-            Fale comigo pelo WhatsApp
-          </button>
+          <div>
+            <ContactButton label="Fale comigo agora!" />
+          </div>
         </div>
       </div>
     </section>

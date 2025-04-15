@@ -6,6 +6,7 @@ import Testimonials from "./_sections-landing-pages/testimonials/testimonials";
 import Footer from "./_sections-landing-pages/footer/footer";
 import ProfileSection from "./_sections-landing-pages/profile/profile";
 import FAQSection from "./_sections-landing-pages/FAQ/faq";
+import WhatsAppFloatingButton from "@/components/btn-WhatsAppFloatingButton/WhatsAppFloatingButton";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <div className="mb-[10vh] ">
         <Navbar />
       </div>
+      <WhatsAppFloatingButton />
       <HeroSection />
       <ServicesSection />
       <ProfileSection />
