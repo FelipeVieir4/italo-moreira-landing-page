@@ -7,67 +7,89 @@ const services = [
     image: {
       width: 50,
       height: 50,
-      src: "./services/law-building.svg",
+      src: "./services/placeholder.svg",
       alt: "Balança da Justiça",
     },
-    title: "Direito Criminal",
+    title: "Tráfico de Drogas",
     description:
-      "Atuação na defesa de clientes em processos criminais, incluindo crimes contra a pessoa, patrimônio, administração pública e crimes digitais.",
+      "Defesa em processos relacionados ao tráfico de entorpecentes, com atuação desde a fase de inquérito até recursos. Estratégia voltada à análise das provas, legalidade da prisão e garantias constitucionais.",
   },
   {
     image: {
       width: 50,
       height: 50,
-      src: "./services/person.svg",
+      src: "./services/placeholder.svg",
+      alt: "Violência Doméstica",
+    },
+    title: "Violência Doméstica",
+    description:
+      "Atuação em defesa de vítimas e acusados em casos de violência doméstica. Medidas protetivas, acompanhamento de inquérito e ações judiciais com enfoque na Lei Maria da Penha.",
+  },
+  {
+    image: {
+      width: 50,
+      height: 50,
+      src: "./services/placeholder.svg",
+      alt: "Crime patrimonial",
+    },
+    title: "Crimes Patrimoniais",
+    description:
+      "Defesa técnica em casos de crimes contra o patrimônio, como furto, roubo, estelionato e receptação. Avaliação da legalidade da ação policial, provas e procedimentos penais.",
+  },
+  {
+    image: {
+      width: 50,
+      height: 50,
+      src: "./services/placeholder.svg",
+      alt: "Crime sexual",
+    },
+    title: "Crimes Sexuais",
+    description:
+      "Atuação sensível e estratégica em acusações ou defesas envolvendo crimes sexuais. Preservação da dignidade das partes, rigor técnico e acompanhamento integral do processo.",
+  },
+  {
+    image: {
+      width: 50,
+      height: 50,
+      src: "./services/placeholder.svg",
+      alt: "Divórcio",
+    },
+    title: "Divórcio",
+    description:
+      "Condução de processos de divórcio e separação, judiciais ou extrajudiciais. Soluções ágeis e seguras para partilha de bens, guarda de filhos e definição de pensão.",
+  },
+  {
+    image: {
+      width: 50,
+      height: 50,
+      src: "./services/placeholder.svg",
+      alt: "Pensão e guarda",
+    },
+    title: "Pensão e guarda",
+    description:
+      "Ações para fixação, revisão ou cobrança de pensão alimentícia, definição de guarda (compartilhada ou unilateral) e regulamentação de visitas. Foco na proteção dos direitos dos menores.",
+  },
+  {
+    image: {
+      width: 50,
+      height: 50,
+      src: "./services/placeholder.svg",
       alt: "Contrato jurídico",
     },
-    title: "Direito Cível",
+    title: "Contratos",
     description:
-      "Atuação em ações indenizatórias, direito do consumidor, disputas contratuais, responsabilidade civil e conflitos familiares.",
+      "Elaboração, revisão e rescisão de contratos civis. Atuação em disputas contratuais e cobrança judicial ou extrajudicial de obrigações não cumpridas.",
   },
   {
     image: {
       width: 50,
       height: 50,
-      src: "./services/contract.svg",
-      alt: "Algemas",
+      src: "./services/placeholder.svg",
+      alt: "Pessoa sendo indenizada",
     },
-    title: "Atuação Judicial",
+    title: "Danos Morais, Materiais e Estéticos",
     description:
-      "Representação de clientes em processos judiciais, incluindo defesa criminal, ações cíveis, pedidos de habeas corpus e recursos.",
-  },
-  {
-    image: {
-      width: 50,
-      height: 50,
-      src: "./services/message-bubble.svg",
-      alt: "Pasta de documentos",
-    },
-    title: "Atuação Extrajudicial",
-    description:
-      "Soluções jurídicas sem necessidade de ação judicial, como acordos, conciliações, mediações e consultorias preventivas.",
-  },
-  {
-    image: {
-      width: 50,
-      height: 50,
-      src: "./services/company.svg",
-      alt: "Câmera de segurança",
-    },
-    title: "Direito Empresarial e Compliance",
-    description:
-      "Consultoria para empresas em conformidade legal, mitigação de riscos e defesa em processos administrativos e criminais.",
-  },
-  {
-    image: {
-      width: 50,
-      height: 50,
-      src: "./services/money.svg",
-      alt: "Símbolo de substância química",
-    },
-    title: "Direito Penal Econômico",
-    description:
-      "Defesa em crimes financeiros, tributários, lavagem de dinheiro e infrações penais empresariais.",
+      "Ações de reparação por prejuízos causados por terceiros, incluindo acidentes, falhas de serviço, ofensas e exposições indevidas. Indenização por dano moral, material ou estético.",
   },
 ];
 
@@ -82,7 +104,7 @@ const ServicesSection: React.FC = () => {
         />
       </div>
 
-      <div className="py-16 bg-gradient-to-b from-primary to-primary  ">
+      <div className="py-16 bg-gradient-to-b from-primary to-primary">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-center font-primary uppercase text-3xl font-bold tracking-wide text-muted md:text-4xl border-b-2 border-highlight pb-4 w-fit mx-auto">
             Serviços Jurídicos
@@ -91,7 +113,11 @@ const ServicesSection: React.FC = () => {
             Conheça nossos serviços especializados para atender às suas
             necessidades jurídicas.
           </p>
-          <ul className="mt-12 grid grid-cols-1 gap-8 text-center md:grid-cols-3">
+          <p className="mt-4 text-center text-muted text-sm md:text-base font-thin font-secondary tracking-widest">
+            <strong> Clique </strong> em um tema abaixo para saber mais 
+          </p>
+    
+          <ul className="mt-12 grid grid-cols-1 gap-8 text-center md:grid-cols-4">
             {services.map((service, index) => (
               <li
                 key={index}
@@ -108,7 +134,13 @@ const ServicesSection: React.FC = () => {
                   {service.title}
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-slate-200 font-secondary font-thin">
-                  {service.description}
+                  {service.description.length > 50
+                  ? (
+                    <>
+                      {service.description.slice(0, 50)}... <i>clique para saber mais</i>
+                    </>
+                  )
+                  : service.description}
                 </p>
               </li>
             ))}
