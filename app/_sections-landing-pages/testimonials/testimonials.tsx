@@ -78,7 +78,7 @@ const Testimonials: React.FC = () => {
             Depoimentos
           </h2> */}
               <h3 className="text-xl md:text-2xl self-start font-primary font-bold text-highlight mb-4 tracking-wide">
-            Feedbacks: 
+            Depoimentos: 
           </h3>
           <div className="grid md:grid-cols-2 grid-cols-1 gap-8 mt-2  ">
             {testimonialDisplay.map((testimonial) => (
