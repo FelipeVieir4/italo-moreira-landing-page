@@ -9,13 +9,13 @@ const HeroSection: React.FC = () => {
         {/* Background image */}
         <div className="absolute top-0 left-0 w-full h-full">
           <img
-            src="./hero/hero-bg-img3.jpg"
+            src="./hero/hero-bg-img5.jpg"
             alt="Imagem de fundo"
             className="object-cover w-full h-full "
           />
         </div>
 
-        <div className="absolute top-0 left-0 w-full h-full  bg-slate-950 opacity-75"></div>
+        <div className="absolute top-0 left-0 w-full h-full  bg-slate-950 opacity-85"></div>
 
         {/* Overlay com transparência e texto */}
         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
