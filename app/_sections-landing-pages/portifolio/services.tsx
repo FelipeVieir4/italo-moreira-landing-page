@@ -129,6 +129,17 @@ const ServicesSection: React.FC = () => {
           <ul className="mt-12 grid grid-cols-1 gap-8 text-center md:grid-cols-4">
             {services.map((service, index) => (
               <li
+              onClick={() => {
+                window.location.href = service.route;
+              }}
+                role="button"
+                aria-label={`Clique para saber mais sobre ${service.title}`}
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    window.location.href = service.route;
+                  }
+                }}
                 key={index}
                 className=" z-10 max-w-full cursor-pointer border-b-2 border-t-2 border-secondary rounded-xl bg-primary px-6 py-8 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:bg-secondary"
               >

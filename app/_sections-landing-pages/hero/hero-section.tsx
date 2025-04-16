@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import ContactButton from "@/components/btn-Contact/btn-contact";
+import Image from "next/image";
 
 const HeroSection: React.FC = () => {
   return (
@@ -8,10 +9,12 @@ const HeroSection: React.FC = () => {
       <div className="relative h-[65vh] w-full">
         {/* Background image */}
         <div className="absolute top-0 left-0 w-full h-full">
-          <img
-            src="./hero/hero-bg-img5.jpg"
+          <Image
+            src="/hero/hero-bg-img5-min.jpg"
             alt="Imagem de fundo"
-            className="object-cover w-full h-full "
+            layout="fill"
+            objectFit="cover"
+            priority
           />
         </div>
 
