@@ -106,7 +106,7 @@ const ServicesSection: React.FC = () => {
   return (
     <section id="services" className="relative">
       <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
-        <img
+        <Image
           src="./services/Patterns.svg"
           alt="Imagem de fundo"
           className="object-cover w-full h-full"

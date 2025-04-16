@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -10,8 +11,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src="./footer/linkedin-icon.svg"
+            <Image src="./footer/linkedin-icon.svg"
               alt="LinkedIn"
               className="w-6 h-6 hover:opacity-75"
             />
@@ -21,7 +21,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
+            <Image
               src="./footer/instagram-icon.svg"
               alt="Instagram"
               className="w-6 h-6 hover:opacity-75"
@@ -32,7 +32,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
+            <Image
               src="./footer/facebook-icon.svg"
               alt="Facebook"
               className="w-6 h-6 hover:opacity-75"

@@ -1,7 +1,7 @@
 "use client";
 import "./navbar.styles.css";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const menuItems = [
   { href: "#", label: "Início" },
