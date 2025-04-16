@@ -15,57 +15,58 @@ const faqData: FAQItem[] = [
       id: 1,
       question: "Fui vítima de calúnia ou difamação. O que devo fazer imediatamente?",
       answer:
-        "Situações de calúnia, difamação ou injúria devem ser registradas em boletim de ocorrência, com coleta de provas como mensagens, áudios ou postagens. O Dr. Italo Moreira, como seu advogado, pode conduzir a representação criminal e, se for o caso, ingressar com ação indenizatória para reparar os danos sofridos.",
+        "Se você foi vítima de calúnia, difamação ou injúria, o primeiro passo é registrar um boletim de ocorrência e reunir provas, como mensagens, áudios ou postagens. Como seu advogado, posso conduzir a representação criminal e, se necessário, entrar com ação indenizatória para reparar os danos sofridos.",
     },
     {
       id: 2,
       question: "A empresa se recusa a resolver um problema com um produto ou serviço. Como devo agir?",
       answer:
-        "Em casos de omissão por parte de fornecedores ou prestadores de serviço, é possível recorrer ao Código de Defesa do Consumidor. O Dr. Italo pode orientar sobre notificações extrajudiciais, ações de indenização e medidas urgentes para resguardar seus direitos e cessar abusos.",
+        "Se uma empresa está se omitindo diante de um problema, é possível recorrer ao Código de Defesa do Consumidor. Posso orientar você sobre notificações extrajudiciais, ações de indenização e medidas urgentes para resguardar seus direitos e impedir abusos.",
     },
     {
       id: 3,
       question: "Estou sendo acusado injustamente. Como me proteger legalmente?",
       answer:
-        "A melhor forma de se proteger é agir com orientação jurídica desde o início. O Dr. Italo Moreira pode atuar na sua defesa, acompanhar investigações, analisar provas e garantir que seus direitos sejam respeitados, evitando condenações injustas ou excessos no processo.",
+        "A melhor forma de se proteger é com orientação jurídica desde o início. Posso atuar na sua defesa, acompanhar investigações, analisar provas e garantir que seus direitos sejam respeitados, evitando condenações injustas ou excessos no processo.",
     },
     {
       id: 4,
       question: "Me envolvi em uma discussão e fui agredido verbalmente. Isso configura crime?",
       answer:
-        "A agressão verbal pode ser enquadrada como injúria, prevista no Código Penal. Nesses casos, o Dr. Italo pode auxiliá-lo na formalização da denúncia, solicitar medidas protetivas se necessário, e representá-lo em ações penais e cíveis para buscar reparação pelos danos morais.",
+        "Sim, agressões verbais podem configurar o crime de injúria, previsto no Código Penal. Posso ajudá-lo a formalizar a denúncia, solicitar medidas protetivas se necessário e representá-lo em ações penais e cíveis para buscar a reparação pelos danos morais.",
     },
     {
       id: 5,
       question: "A escola do meu filho está sendo negligente com a segurança. Posso responsabilizá-la?",
       answer:
-        "Instituições de ensino têm responsabilidade objetiva sobre os alunos. Se houver falha que comprometa a segurança, o Dr. Italo pode conduzir o processo de responsabilização, tanto por via extrajudicial quanto judicial, buscando a correção da conduta e eventual reparação por danos.",
+        "Sim, instituições de ensino têm responsabilidade objetiva sobre os alunos. Caso haja falhas que coloquem a segurança em risco, posso conduzir o processo de responsabilização, tanto por via extrajudicial quanto judicial, buscando a correção da conduta e a devida reparação.",
     },
     {
       id: 6,
       question: "Descobri que meu nome foi negativado indevidamente. Como resolver?",
       answer:
-        "A negativação indevida pode gerar sérios prejuízos. O Dr. Italo pode entrar com pedido de urgência para retirada do nome dos cadastros, além de ajuizar ação para compensação por danos morais, responsabilizando a empresa pelos efeitos causados.",
+        "A negativação indevida pode trazer grandes prejuízos. Posso entrar com pedido de urgência para retirar seu nome dos cadastros restritivos e também ajuizar ação de indenização por danos morais contra a empresa responsável.",
     },
     {
       id: 7,
       question: "Sou vítima de ameaças constantes. Só a denúncia é suficiente?",
       answer:
-        "A denúncia é importante, mas pode ser insuficiente diante de riscos contínuos. O Dr. Italo poderá solicitar medidas protetivas, como afastamento do agressor, bloqueio de contato e acompanhamento do caso junto às autoridades para garantir sua segurança de forma eficaz.",
+        "A denúncia é essencial, mas em muitos casos, pode não ser suficiente. Posso solicitar medidas protetivas como afastamento do agressor, bloqueio de contato e acompanhar o caso junto às autoridades para garantir sua segurança de maneira eficaz.",
     },
     {
       id: 8,
       question: "O que posso fazer se um familiar desapareceu e a polícia não está dando retorno?",
       answer:
-        "É possível buscar apoio jurídico para acelerar medidas, como requerer habeas corpus de busca, acionar o Ministério Público e cobrar providências das autoridades. O Dr. Italo pode atuar diretamente na exigência de respostas e no suporte às famílias nesse momento delicado.",
+        "É possível acionar medidas jurídicas para cobrar respostas. Posso requerer habeas corpus de busca, acionar o Ministério Público e exigir providências das autoridades, dando suporte jurídico e emocional à família nesse momento tão delicado.",
     },
     {
       id: 9,
       question: "Estou enfrentando perseguição digital. Existe proteção legal contra isso?",
       answer:
-        "Sim. A perseguição sistemática, inclusive online, pode ser considerada crime de ‘stalking’. O Dr. Italo pode agir para formalizar a denúncia, solicitar medidas protetivas e representar judicialmente seus interesses, buscando a responsabilização do agressor e o fim do assédio.",
+        "Sim. A perseguição, inclusive em ambiente digital, pode configurar o crime de ‘stalking’. Posso formalizar a denúncia, solicitar medidas protetivas e representá-lo judicialmente para responsabilizar o agressor e garantir sua proteção.",
     },
   ];
+  
   
 
 const FAQSection: React.FC = () => {

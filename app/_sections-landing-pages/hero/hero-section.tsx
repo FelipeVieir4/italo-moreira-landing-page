@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
           </h1>
           {/* Subtítulo */}
           <p className="fade-in delay-0s5 font-secondary font-thin text-white text-sm md:text-xl  mt-4 text-center px-6 max-w-4xl">
-            Nosso compromisso é oferecer tranquilidade e segurança jurídica, com
+            Compromisso em oferecer tranquilidade e segurança jurídica, com
             soluções eficientes e alinhadas aos seus direitos
           </p>
 

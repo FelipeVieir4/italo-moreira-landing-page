@@ -41,27 +41,27 @@ const ProfileSection: React.FC = () => {
             Dr. Italo Moreira
           </h3>
           <p className="text-sm md:text-lg text-textPrimary leading-relaxed font-secondary mb-4 text-justify">
-            O Dr. Italo Moreira é um advogado com sólida formação e ampla
-            experiência nas áreas cível, criminal e na resolução de conflitos
-            extrajudiciais. Com um compromisso inabalável com a ética, oferece
-            soluções jurídicas de alta qualidade, sempre buscando resultados que
-            atendam com precisão às necessidades de seus clientes. <br />
+            Sou advogado com sólida formação e ampla experiência nas áreas
+            cível, criminal e na resolução de conflitos extrajudiciais. Com um
+            compromisso inabalável com a ética, ofereço soluções jurídicas de
+            alta qualidade, sempre buscando resultados que atendam com precisão
+            às necessidades dos meus clientes. <br />
             <br />
-            Com uma abordagem moderna e estratégica, o Dr. Italo Moreira se
-            mantém à frente das constantes mudanças legislativas e tendências do
-            mercado jurídico, garantindo que sua atuação seja sempre embasada
-            nas melhores práticas e soluções eficazes para a resolução de seus
-            conflitos.
+            Através de uma abordagem moderna e estratégica, mantenho-me atualizado
+            diante das constantes mudanças legislativas e tendências do mercado
+            jurídico, garantindo que minha atuação seja sempre embasada nas
+            melhores práticas e soluções eficazes para a resolução dos conflitos. 
             <br />
-            <br />O foco é claro: entender profundamente o seu caso e garantir
-            uma resolução ágil e eficaz, com estratégias personalizadas para
-            proteger seus direitos. O Dr. Italo Moreira está dedicado a
-            proporcionar um atendimento humanizado e transparente, dando-lhe a
-            confiança necessária para que você se sinta seguro durante todo o
-            processo. Seu objetivo é não apenas resolver seu conflito, mas
-            garantir que você tenha o suporte jurídico necessário para caminhar
-            com tranquilidade.
+            <br />
+            Meu foco é claro: entender profundamente o seu caso e garantir uma
+            resolução ágil e eficaz, com estratégias personalizadas para
+            proteger seus direitos. Estou comprometido em proporcionar um
+            atendimento humanizado e transparente, dando-lhe a confiança
+            necessária para que se sinta seguro durante todo o processo. Meu
+            objetivo é não apenas resolver o seu conflito, mas garantir que você
+            tenha o suporte jurídico necessário para caminhar com tranquilidade.
           </p>
+
           <div>
             <ContactButton label="Fale comigo agora!" />
           </div>
