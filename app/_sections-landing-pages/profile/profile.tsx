@@ -41,16 +41,17 @@ const ProfileSection: React.FC = () => {
             Dr. Italo Moreira
           </h3>
           <p className="text-sm md:text-lg text-textPrimary leading-relaxed font-secondary mb-4 text-justify">
-            Sou advogado com sólida formação e ampla experiência nas áreas
+            Sou um advogado com sólida formação e ampla experiência nas áreas
             cível, criminal e na resolução de conflitos extrajudiciais. Com um
             compromisso inabalável com a ética, ofereço soluções jurídicas de
             alta qualidade, sempre buscando resultados que atendam com precisão
             às necessidades dos meus clientes. <br />
             <br />
-            Através de uma abordagem moderna e estratégica, mantenho-me atualizado
-            diante das constantes mudanças legislativas e tendências do mercado
-            jurídico, garantindo que minha atuação seja sempre embasada nas
-            melhores práticas e soluções eficazes para a resolução dos conflitos. 
+            Através de uma abordagem moderna e estratégica, me mantenho
+            atualizado diante das constantes mudanças legislativas e tendências
+            do mercado jurídico, garantindo que minha atuação seja sempre
+            pautada nas melhores práticas e soluções eficazes para a resolução
+            dos conflitos.
             <br />
             <br />
             Meu foco é claro: entender profundamente o seu caso e garantir uma
@@ -58,7 +59,7 @@ const ProfileSection: React.FC = () => {
             proteger seus direitos. Estou comprometido em proporcionar um
             atendimento humanizado e transparente, dando-lhe a confiança
             necessária para que se sinta seguro durante todo o processo. Meu
-            objetivo é não apenas resolver o seu conflito, mas garantir que você
+            objetivo não é apenas resolver o seu conflito, mas garantir que você
             tenha o suporte jurídico necessário para caminhar com tranquilidade.
           </p>
 
