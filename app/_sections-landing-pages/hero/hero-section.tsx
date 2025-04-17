@@ -15,6 +15,7 @@ const HeroSection: React.FC = () => {
             fill
             priority
             sizes="100vw"
+            style={{ objectFit: "cover" }}
           />
         </div>
 
