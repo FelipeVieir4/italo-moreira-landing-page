@@ -12,9 +12,9 @@ const HeroSection: React.FC = () => {
           <Image
             src="/hero/hero-bg-img5-min.jpg"
             alt="Imagem de fundo"
-            layout="fill"
-            objectFit="cover"
+            fill
             priority
+            sizes="100vw"
           />
         </div>
 

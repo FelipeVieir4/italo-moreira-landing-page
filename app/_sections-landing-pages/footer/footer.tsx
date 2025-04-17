@@ -11,8 +11,11 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src="./footer/linkedin-icon.svg"
+            <Image
+              src="./footer/linkedin-icon.svg"
               alt="LinkedIn"
+              width={24}
+              height={24}
               className="w-6 h-6 hover:opacity-75"
             />
           </a>
@@ -24,17 +27,21 @@ const Footer = () => {
             <Image
               src="./footer/instagram-icon.svg"
               alt="Instagram"
+              width={24}
+              height={24}
               className="w-6 h-6 hover:opacity-75"
             />
           </a>
           <a
-            href="https://www.facebook.com/italo.henrique.94801/"
+            href="https://www.facebook.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Image
               src="./footer/facebook-icon.svg"
               alt="Facebook"
+              width={24}
+              height={24}
               className="w-6 h-6 hover:opacity-75"
             />
           </a>

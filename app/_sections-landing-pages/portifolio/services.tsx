@@ -109,7 +109,8 @@ const ServicesSection: React.FC = () => {
         <Image
           src="./services/Patterns.svg"
           alt="Imagem de fundo"
-          className="object-cover w-full h-full"
+          fill
+          className="object-cover"
         />
       </div>
 
