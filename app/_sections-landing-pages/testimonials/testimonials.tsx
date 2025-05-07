@@ -12,33 +12,39 @@ const testimonialsData = [
     Sou muito grata pelo excelente trabalho. 
     
     Obrigado Dr Italo!`,
-    name: "Cliente 1",
+    name: "Cliente anônimo 1",
     data: "20 de março de 2025",
   },
   {
     id: 2,
     text: `Um profissional dedicado e muito atencioso. Me deixou a par de todas as etapas e evoluções do processo de maneira clara e objetiva. Recomendo!`,
-    name: "Cliente 2",
+    name: "Thiago",
     data: "18 de março de 2025",
   },
 
   {
     id: 3,
     text: `Poder contar com o Dr. Italo durante o meu processo foi a melhor escolha que fiz. Ótima assessoria, se prontificou a tirar dúvidas, se apresenta disponível para somar com seus clientes, atencioso e demonstra claramente seu comprometimento profissional. Hoje sei com quem posso contar se precisar. Somente agradecer e lhe indicar para aqueles que precisam do seu trabalho. Muito obrigada por tudo.`,
-    name: "Cliente 3",
+    name: "Camila",
     data: "01 de fevereiro de 2025",
   },
   {
     id: 4,
     text: `O dr Italo foi o advogado que acompanhou meu processo que durante todo o acordo foi dado a mim toda a assistência em tempo integral me mantendo informanda de todas as decisões e não ficando nenhuma dúvida sobre a decisão Muito obrigada por todo serviço prestado com excelência`,
-    name: "Cliente 4",
+    name: "Lilian",
     data: "17 de fevereiro de 2025",
   },
   {
     id: 5,
     text: `Eu estava precisando de um advogado e não encontrava, até que encontrei o Dr. Ítalo que prontamente me atendeu, com muita atenção e humanidade. Agora tenho um advogado que me orienta e resolve minhas demandas na justiça. Estou feliz e satisfeito com o seu profissionalismo.`,
-    name: "Cliente 4",
+    name: "Clysberth",
     data: "05 de janeiro de 2025",
+  },
+  {
+    id: 6,
+    text: `Estou satisfeita com a atenção e clareza do atendimento do Dr.Italo,muito educado e sempre me concede um retorno das demandas solicitadas.`,
+    name: "Arielly",
+    data: "16 de abril de 2025",
   },
 ];
 
@@ -77,8 +83,8 @@ const Testimonials: React.FC = () => {
           {/* <h2 className=" text-center font-primary uppercase text-3xl font-bold tracking-wide text-primary md:text-4xl mb-10">
             Depoimentos
           </h2> */}
-              <h3 className="text-xl md:text-2xl self-start font-primary font-bold text-highlight mb-4 tracking-wide">
-            Depoimentos: 
+          <h3 className="text-xl md:text-2xl self-start font-primary font-bold text-highlight mb-4 tracking-wide">
+            Depoimentos:
           </h3>
           <div className="grid md:grid-cols-2 grid-cols-1 gap-8 mt-2  ">
             {testimonialDisplay.map((testimonial) => (

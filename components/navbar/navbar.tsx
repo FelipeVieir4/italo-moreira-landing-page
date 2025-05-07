@@ -4,10 +4,10 @@ import Image from "next/image";
 import { useState } from "react";
 
 const menuItems = [
-  { href: "#", label: "Início" },
-  { href: "#services", label: "Serviços" },
-  { href: "#testimonials", label: "Depoimentos" },
-  { href: "#about", label: "Sobre" },
+  { href: "/#", label: "Início" },
+  { href: "/#services", label: "Serviços" },
+  { href: "/#testimonials", label: "Depoimentos" },
+  { href: "/#about", label: "Sobre" },
   // { href: "#numeros", label: "Mídia" },
   // { href: "#mais", label: "Mais" },
 ];
