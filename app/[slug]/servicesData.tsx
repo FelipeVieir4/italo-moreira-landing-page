@@ -1,20 +1,17 @@
 
 export const servicesData = {
   divorcio: {
-    title: "Advocacia Especializada em Divórcio",
-    subtitle: "Soluções ágeis, discretas e seguras para quem precisa recomeçar com tranquilidade.",
-    heroImage: "/images/divorcio/hero-bg.jpg",
-    ctaPrimary: { label: "Agende uma Consulta Gratuita", action: "abrirWhatsapp" },
+    title: "Divórcio",
+    subTitle: "Soluções discretas e seguras para quem precisa recomeçar com tranquilidade.",
+    description:"Condução de processos de divórcio e separação, judiciais ou extrajudiciais. Soluções ágeis e seguras para partilha de bens, guarda de filhos e definição de pensão",
+    heroImage: "./services-pages-img/divorce-img.jpg",
+    ctaPrimary: { label: "Agendar"},
     benefits: [
       "Atendimento rápido e sigiloso",
       "Divórcio judicial ou extrajudicial",
       "Orientação completa sobre guarda, pensão e partilha",
       "Atuação em todo o Brasil, com processo 100% online"
-    ],
-    testimonials: [
-      { name: "Carla M.", statement: "O atendimento foi humano e muito profissional. Resolvi meu divórcio em poucos dias." },
-      { name: "João L.", statement: "Fiquei impressionado com a rapidez e a clareza do processo. Recomendo muito!" }
-    ],
+    ],    
     faq: [
       { question: "Preciso comparecer ao fórum?", answer: "Não necessariamente..." },
       { question: "Quanto tempo leva um divórcio?", answer: "Um divórcio consensual pode ser concluído..." },

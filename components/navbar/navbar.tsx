@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
           src={menuLogo}
           alt="Italo Moreira Advocacia"
         />
-        <a href="#">
+        <a href="/#">
           <div className="flex  gap-4 items-center text-2xl ">
             {menuText.map((text, index) => (
               <p
