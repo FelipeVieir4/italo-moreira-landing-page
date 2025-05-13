@@ -27,7 +27,7 @@
 body {
   height: 100vh;
   color: var(--text-color);
-  background: var(--light-background);
+  background: var(--muted);
   font-family: --font-family-primary
 }
 

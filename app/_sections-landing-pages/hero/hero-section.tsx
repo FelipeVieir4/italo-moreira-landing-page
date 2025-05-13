@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => {
         {/* Background image */}
         <div className="absolute top-0 left-0 w-full h-full">
           <Image
-            src="/hero/hero-bg-img5-min.jpg"
+            src="./hero/hero-bg-img5_resized.jpg"
             alt="Imagem de fundo"
             fill
             priority
