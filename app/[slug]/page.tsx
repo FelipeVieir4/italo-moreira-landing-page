@@ -10,11 +10,11 @@ export async function generateStaticParams() {
 const validSlugs = ["divorcio"];
 
 interface ServicePageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {
-  const { slug } = params;
+  const { slug } = await params;
 
   // Redirect to 404 if the slug is not valid
   if (!validSlugs.includes(slug)) {
