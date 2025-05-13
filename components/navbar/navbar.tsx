@@ -2,6 +2,7 @@
 import "./navbar.styles.css";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 const menuItems = [
   { href: "/#", label: "Início" },
@@ -40,7 +41,7 @@ const Navbar: React.FC = () => {
           src={menuLogo}
           alt="Italo Moreira Advocacia"
         />
-        <a href="/#">
+        <Link href="/#">
           <div className="flex  gap-4 items-center text-2xl ">
             {menuText.map((text, index) => (
               <p
@@ -51,7 +52,7 @@ const Navbar: React.FC = () => {
               </p>
             ))}
           </div>
-        </a>
+        </Link>
       </div>
 
       {/* Ícone do Menu Mobile */}
@@ -73,9 +74,9 @@ const Navbar: React.FC = () => {
         <ul className="flex">
           {menuItems.map((item, index) => (
             <li key={index}>
-              <a href={item.href} className="text-textPrimary font-secondary">
+              <Link href={item.href} className="text-textPrimary font-secondary">
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -90,12 +91,12 @@ const Navbar: React.FC = () => {
         <ul className="flex flex-col justify-evenly items-center h-full">
           {menuItems.map((item, index) => (
             <li key={index}>
-              <a
+              <Link
                 href={item.href}
                 className="hover:text-gray-600 transition text-highlight w-full text-center tracking-widest font-secondary "
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
