@@ -7,7 +7,7 @@ import ContactButton from "@/components/btn-Contact/btn-contact";
 const validSlugs = Object.keys(servicesData);
 
 export async function generateStaticParams() {
-  return validSlugs.map((slug) => ({ slug }));
+  return Promise.resolve(validSlugs.map((slug) => ({ slug })));
 }
 
 interface ServicePageProps {
