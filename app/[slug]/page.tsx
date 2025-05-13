@@ -11,11 +11,11 @@ export async function generateStaticParams() {
 }
 
 interface ServicePageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export default function ServicePage({ params }: ServicePageProps) {
-  const { slug } = params;
+export default async  function ServicePage({ params }: ServicePageProps) {
+ const { slug } = await params;
 
   if (!(slug in servicesData)) {
     return notFound();
