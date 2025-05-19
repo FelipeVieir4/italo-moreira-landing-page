@@ -49,7 +49,7 @@ const services = [
     title: "Danos Morais, Materiais e Estéticos",
     description:
       "Ações de reparação por prejuízos causados por terceiros, incluindo acidentes, falhas de serviço, ofensas e exposições indevidas. Indenização por dano moral, material ou estético.",
-    route: "/danos-morais-materiais-e-esteticos",
+    route: "/danos-morais",
   },
   {
     image: {
@@ -97,7 +97,7 @@ const services = [
     title: "Tráfico de Drogas",
     description:
       "Defesa em processos relacionados ao tráfico de entorpecentes, com atuação desde a fase de inquérito até recursos. Estratégia voltada à análise das provas, legalidade da prisão e garantias constitucionais.",
-    route: "/trafico-de-drogas",
+    route: "/trafico-drogas",
   },
 ];
 

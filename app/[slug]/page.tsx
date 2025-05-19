@@ -3,6 +3,8 @@ import Navbar from "@/components/navbar/navbar";
 import Image from "next/image";
 import { servicesData } from "./servicesData";
 import ContactButton from "@/components/btn-Contact/btn-contact";
+import WhatsAppFloatingButton from "@/components/btn-WhatsAppFloatingButton/WhatsAppFloatingButton";
+import Footer from "../_sections-landing-pages/footer/footer";
 
 const validSlugs = Object.keys(servicesData);
 
@@ -26,6 +28,7 @@ export default async  function ServicePage({ params }: ServicePageProps) {
   return (
     <div className="bg-primary text-white min-h-screen flex flex-col">
       <Navbar />
+      <WhatsAppFloatingButton />
 
       {/* HERO */}
       <section className="relative min-h-[80vh] w-full flex items-center justify-center text-center py-8 md:py-0">
@@ -93,24 +96,25 @@ export default async  function ServicePage({ params }: ServicePageProps) {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-6 md:px-12 bg-primary text-textPrimary">
-        <h2 className="text-3xl font-bold text-center mb-8">Perguntas Frequentes</h2>
+      <section className="py-16 px-6 md:px-12 bg-muted text-textSecondary">
+        <h2 className="text-3xl font-bold text-center mb-8 uppercase">Perguntas Frequentes</h2>
         <div className="max-w-3xl mx-auto space-y-4">
           {slugData.faq.map((faq, i) => (
             <details
               key={i}
-              className="bg-white/5 rounded-lg p-4 transition hover:bg-white/10"
+              className="bg-secondary text-textPrimary rounded-lg p-4 transition hover:bg-primary"
             >
               <summary className="cursor-pointer text-lg font-medium focus:outline-none focus:ring-2 focus:ring-highlight">
                 {faq.question}
               </summary>
-              <p className="mt-2 text-sm text-gray-300 leading-relaxed">
+              <p className="mt-2 text-sm text-textPrimary font-secondary leading-relaxed">
                 {faq.answer}
               </p>
             </details>
           ))}
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
