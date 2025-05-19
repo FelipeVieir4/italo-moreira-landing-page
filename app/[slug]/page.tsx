@@ -59,7 +59,17 @@ export default async  function ServicePage({ params }: ServicePageProps) {
       </section>
 
       {/* BENEFÍCIOS */}
-      <section className="py-16 px-6 md:px-12 bg-primary text-textPrimary text-center">
+      <section className="py-16 px-6 md:px-12 bg-primary text-textPrimary text-center relative">
+
+      <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+        <Image
+          src="./services/Patterns.svg"
+          alt="Imagem de fundo"
+          fill
+          className="object-cover"
+        />
+      </div>
+
         <h2 className="font-primary text-3xl md:text-4xl uppercase mb-8">
           Por que escolher nossos serviços?
         </h2>
@@ -79,7 +89,7 @@ export default async  function ServicePage({ params }: ServicePageProps) {
       {/* CTA SECUNDÁRIO */}
       <section
         id="contato"
-        className="py-16 bg-secondary text-textPrimary text-center px-4"
+        className="py-16 bg-gradient-to-b from-primary via-secondary to-primary text-textPrimary text-center px-4"
       >
         <h2 className="font-primary text-3xl md:text-4xl uppercase mb-4">
           Agende sua consulta agora mesmo
