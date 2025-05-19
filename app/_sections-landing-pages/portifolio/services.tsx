@@ -114,7 +114,7 @@ const ServicesSection: React.FC = () => {
         />
       </div>
 
-      <div className="py-16 bg-gradient-to-b from-primary to-primary">
+      <div className="py-16 bg-gradient-to-b from-primary via-secondary to-primary">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-center font-primary uppercase text-3xl font-bold tracking-wide text-muted md:text-4xl border-b-2 border-highlight pb-4 w-fit mx-auto">
             Serviços Jurídicos
