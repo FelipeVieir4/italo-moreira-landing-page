@@ -38,7 +38,7 @@ const ProfileSection: React.FC = () => {
         </div>
         <div className="text-white w-full sm:w-2/3 flex flex-col justify-center items-center text-center sm:text-left">
           <h3 className="text-xl md:text-2xl self-start font-primary font-bold text-highlight mb-4">
-            Dr. Italo Moreira
+            Quem vai te ajudar?
           </h3>
           <p className="text-sm md:text-lg text-textPrimary leading-relaxed font-secondary mb-4 text-justify">
             Sou um advogado com sólida formação e ampla experiência nas áreas
