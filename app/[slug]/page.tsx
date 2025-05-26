@@ -170,7 +170,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
       <section className="py-16 px-6 md:px-12 bg-muted text-textSecondary">
         <FaqComponent
-          faqData={slugData.faq.map((item: any, idx: number) => ({
+          faqData={slugData.faq.map((item: { id?: number; question: string; answer: string; cta?: string }, idx: number) => ({
             id: item.id ?? idx,
             question: item.question,
             answer: item.answer,
