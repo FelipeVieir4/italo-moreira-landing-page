@@ -55,7 +55,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
       </section>
 
       <section className="mt-12 mb-10 px-4 md:px-0  bg-gradient-to-b from-primary via-secondary to-primary max-h-fit">
-        <div className="max-w-4xl mx-auto bg-white/10 rounded-xl shadow-lg p-8 border border-white/20 backdrop-blur-md md:-translate-y-28">
+        <div className="sticky max-w-4xl max-h-fit mx-auto bg-white/10 rounded-xl shadow-lg p-8 border border-white/20 backdrop-blur-md md:-translate-y-[25%]">
           <h2 className="text-2xl md:text-3xl font-primary font-semibold uppercase tracking-wide text-highlight mb-6 text-center">
             O que você precisa saber?
           </h2>

@@ -3,8 +3,8 @@ import Link from 'next/link';
 export default function UnderConstruction() {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-primary text-textPrimary font-primary">
-            <h1 className="text-4xl font-bold mb-4">Ainda estamos em construção</h1>
-            <p className="text-lg mb-6">Estamos trabalhando para trazer algo incrível para você. Por favor, volte em breve!</p>
+            <h1 className="text-4xl font-bold mb-4">Página não encontrada</h1>
+            <p className="text-lg mb-6">Não há nada por aqui!!!</p>
             <div className="flex items-center justify-center mb-6">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
