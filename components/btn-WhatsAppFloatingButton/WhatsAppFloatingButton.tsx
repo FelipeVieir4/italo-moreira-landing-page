@@ -7,7 +7,7 @@ const WhatsAppFloatingButton: React.FC = () => {
     <button
       onClick={iniciarChatWhatsApp}
       aria-label="Abrir conversa no WhatsApp"
-      className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-300"
+      className="fixed bottom-6 right-6 z-50 bg-whatsAppColor hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-300"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
             {menuText.map((text, index) => (
               <p
                 key={index}
-                className="text-textPrimary last:border-l-2 border-gray-300 last:pl-4 last:text-lg last:hidden sm:last:block uppercase font-primary"
+                className="text-muted last:border-l-2 border-gray-300 last:pl-4 last:text-lg last:hidden sm:last:block uppercase font-primary"
               >
                 {text}
               </p>
@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
         <ul className="flex">
           {menuItems.map((item, index) => (
             <li key={index}>
-              <Link href={item.href} className="text-textPrimary font-secondary">
+              <Link href={item.href} className="text-muted font-secondary">
                 {item.label}
               </Link>
             </li>
@@ -93,7 +93,7 @@ const Navbar: React.FC = () => {
             <li key={index}>
               <Link
                 href={item.href}
-                className="hover:text-gray-600 transition text-highlight w-full text-center tracking-widest font-secondary "
+                className="hover:text-gray-600 transition text-muted w-full text-center tracking-widest font-secondary "
               >
                 {item.label}
               </Link>

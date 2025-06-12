@@ -1,7 +1,8 @@
 export const servicesData = {
   divorcio: {
-    title: "Divórcio",
-    subTitle: "Soluções seguras para quem precisa recomeçar com tranquilidade.",
+    title: "Precisa se divorciar? ",
+    subTitle: "Fale com um advogado especializado e resolva com segurança.",
+    subTitle2: "Não perca tempo com incertezas. Atuamos com processos de divórcio em todo o Brasil — forma rápida, segura e 100% online. Tire suas dúvidas agora com um advogado de confiança.",
     description: [
       {
         p: `O divórcio é um procedimento que exige cuidado e orientação jurídica. Eu ajudo você a resolver todas as questões envolvidas como`,
@@ -15,7 +16,7 @@ export const servicesData = {
       },
     ],
     heroImage: "./services-pages-img/divorce-img.jpg",
-    ctaPrimary: { label: "Agendar" },
+    ctaPrimary: { label: "Falar agora com advogado no WhatsApp" },
     benefits: [
       "Atendimento rápido e discreto",
       "Divórcio judicial ou extrajudicial",
@@ -65,6 +66,7 @@ export const servicesData = {
     title: "Pensão e Guarda",
     subTitle:
       "Proteção dos direitos dos menores com soluções claras e assertivas.",
+    subTitle2: "",
     description:
       "Ações para fixação, revisão ou cobrança de pensão alimentícia, definição de guarda (compartilhada ou unilateral) e regulamentação de visitas.",
     heroImage: "./services-pages-img/generic-bg.jpg",
@@ -105,6 +107,7 @@ export const servicesData = {
     title: "Contratos",
     subTitle:
       "Segurança jurídica em cada cláusula e tranquilidade nas relações civis.",
+    subTitle2: "",
     description:
       "Elaboração, revisão e rescisão de contratos civis, com atenção especial aos direitos e deveres das partes.",
     heroImage: "./services-pages-img/generic-bg.jpg",
@@ -144,6 +147,7 @@ export const servicesData = {
   "danos-morais": {
     title: "Danos Morais, Materiais e Estéticos",
     subTitle: "Reparação justa para quem sofreu danos injustificáveis.",
+    subTitle2: "",
     description:
       "Ações de reparação por prejuízos causados por terceiros, com foco em danos morais, materiais ou estéticos.",
     heroImage: "./services-pages-img/generic-bg.jpg",
@@ -180,6 +184,7 @@ export const servicesData = {
     title: "Violência Doméstica",
     subTitle:
       "Defesa firme, acolhimento e proteção em casos sensíveis e urgentes.",
+    subTitle2: "",
     description:
       "Atuação em defesa de vítimas e acusados em casos de violência doméstica, com medidas protetivas e acompanhamento jurídico especializado.",
     heroImage: "./services-pages-img/generic-bg.jpg",
@@ -216,6 +221,7 @@ export const servicesData = {
     title: "Crimes Sexuais",
     subTitle:
       "Atuação estratégica e acolhedora, com seriedade e respeito às partes.",
+    subTitle2: "",
     description:
       "Atuação sensível e estratégica em acusações ou defesas relacionadas a crimes sexuais, com foco em provas e direitos fundamentais.",
     heroImage: "./services-pages-img/generic-bg.jpg",
@@ -254,6 +260,7 @@ export const servicesData = {
     title: "Crimes Patrimoniais",
     subTitle:
       "Defesa técnica em casos de furto, roubo, estelionato e outros crimes contra o patrimônio.",
+    subTitle2: "",
     description:
       "Atuação técnica em casos de crimes contra o patrimônio, como furto, roubo, estelionato e apropriação indébita.",
     heroImage: "./services-pages-img/generic-bg.jpg",
@@ -291,6 +298,7 @@ export const servicesData = {
     title: "Tráfico de Drogas",
     subTitle:
       "Defesa em processos relacionados ao tráfico, com análise técnica e estratégica.",
+    subTitle2: "",
     description:
       "Defesa em processos relacionados ao tráfico de entorpecentes, com foco na análise de provas, legalidade da abordagem e medidas alternativas à prisão.",
     heroImage: "./services-pages-img/generic-bg.jpg",

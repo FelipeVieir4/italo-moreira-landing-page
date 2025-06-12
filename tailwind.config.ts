@@ -15,7 +15,9 @@ export default {
         "textSecondary": "var(--text-secondary)", // Azul Escuro Profundo (Texto Secundário)
         "highlight": "var(--highlight)",     // Dourado (Destaque)
         "highlightDark": "var(--highlight-dark)", // Dourado Escuro (Destaque Escuro)
-        "muted": "var(--muted)"          // Branco (Cor Suave / Neutra)
+        "muted": "var(--muted)" ,         // Branco (Cor Suave / Neutra)
+        "whatsAppColor": "var(--whatsAppColor)" // Verde WhatsApp
+
       },
       fontFamily: {
         primary: ["Playfair Display", "serif"],
