@@ -13,7 +13,7 @@
 
 .navbar-links a:focus,
 .navbar-links a:active {
-  background-color: var(--highlight);
+  background-color: none;
   border-radius: 10px;
 }
 

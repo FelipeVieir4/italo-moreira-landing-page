@@ -34,7 +34,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <WhatsAppFloatingButton />
 
       {/* HERO */}
-      <section className="mt-20 relative h-[60vh] w-full flex items-center justify-center">
+      <section className="mt-10 relative h-[60vh] w-full flex items-center justify-center">
         
         <Image
           src={slugData.heroImage}
@@ -42,10 +42,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
           fill
           priority
           sizes="100vw"
-          style={{ objectFit: "cover", opacity: 0.85 }}
+          style={{ objectFit: "cover" }}
         />
-        <div className="absolute top-0 left-0 w-full h-full  bg-slate-950 opacity-30"></div>
-        <div className="relative z-10 px-4 w-full h-full p-8 rounded-lg shadow-lg backdrop-blur-sm bg-white/10 border border-white/20 flex flex-col items-center justify-center text-center">
+        <div className="absolute top-0 left-0 w-full h-full  bg-primary opacity-40"></div>
+        <div className="relative z-10 px-4 w-full h-full p-8  shadow-lg  flex flex-col items-center justify-center text-center">
           <h1
             id="hero-service-section"
             className="text-5xl md:text-7xl font-primary font-bold uppercase tracking-wide"
@@ -54,7 +54,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </h1>
           <h2
             id="hero-service-section"
-            className="mt-4 sm:text-sm md:text-2xl  font-secondary tracking-wide text-textPrimary"
+            className="mt-4 text-lg md:text-2xl  font-secondary tracking-wide text-textPrimary "
           >
             {slugData.subTitle}
           </h2>
@@ -71,7 +71,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             {slugData.tagline}
           </p>
         )}
-        <div className="sticky max-w-4xl max-h-fit mx-auto bg-white/10 rounded-xl shadow-lg p-8 border border-white/20 backdrop-blur-md">
+        <div className="sticky max-w-4xl max-h-fit mx-auto bg-primary rounded-xl shadow-lg p-8 border border-white/20 backdrop-blur-sm">
           <h2 className="text-2xl md:text-3xl font-primary font-semibold uppercase tracking-wide text-highlight mb-6 text-center">
             O que você precisa saber?
           </h2>

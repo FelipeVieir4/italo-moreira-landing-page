@@ -1,7 +1,7 @@
 import "./style.css";
 const GoogleRatingPage = () => {
   return (
-    <section className="h-fit bg-primary">
+    <section id="testimonials" className="h-fit bg-primary">
       <div className="flex flex-col items-center justify-center ">
         <h3 className="text-xl md:text-2xl  font-primary font-bold text-highlight mt-8 tracking-wide uppercase">
           Depoimentos
