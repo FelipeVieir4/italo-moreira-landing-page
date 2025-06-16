@@ -1,0 +1,15 @@
+#hero-text {
+text-shadow:
+    -1px -1px 0 var(--primary),
+     1px -1px 0 var(--primary),
+    -1px  1px 0 var(--primary),
+     1px  1px 0 var(--primary);
+
+}
+
+
+#hero-contact-btn:hover {
+    background-color: var(--whatsAppColor);
+    color: var(--white);
+
+}

@@ -7,6 +7,7 @@ import WhatsAppFloatingButton from "@/components/btn-WhatsAppFloatingButton/What
 import Footer from "../_sections-landing-pages/footer/footer";
 import FaqComponent from "@/components/faq/faq-component";
 import GoogleRatingPage from "../_sections-landing-pages/google-rating/page";
+import "./page.css";
 
 const validSlugs = Object.keys(servicesData);
 
@@ -28,39 +29,48 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const slugData = servicesData[slug as keyof typeof servicesData];
 
   return (
-    <div className="bg-primary text-white min-h-screen flex flex-col">
+    <div className="bg-primary text-white ">
       <Navbar />
       <WhatsAppFloatingButton />
 
       {/* HERO */}
-       <section className=" mt-20 relative min-h-[60vh] w-full flex items-center justify-center text-center">
+      <section className="mt-20 relative h-[60vh] w-full flex items-center justify-center">
+        
         <Image
           src={slugData.heroImage}
           alt={`Imagem de fundo do serviço ${slugData.title}`}
           fill
           priority
           sizes="100vw"
-          style={{ objectFit: "cover", opacity: 0.15 }}
+          style={{ objectFit: "cover", opacity: 0.85 }}
         />
-        <div className="relative z-10 px-4 mb-4 max-w-4xl mx-auto mt-28">
-          <h1 className="text-3xl md:text-5xl  font-primary font-bold uppercase tracking-wide">
+        <div className="absolute top-0 left-0 w-full h-full  bg-slate-950 opacity-30"></div>
+        <div className="relative z-10 px-4 w-full h-full p-8 rounded-lg shadow-lg backdrop-blur-sm bg-white/10 border border-white/20 flex flex-col items-center justify-center text-center">
+          <h1
+            id="hero-service-section"
+            className="text-5xl md:text-7xl font-primary font-bold uppercase tracking-wide"
+          >
             {slugData.title}
           </h1>
-          <h2 className="mt-4 text-thin md:text-2xl font-secondary tracking-wide text-slate-300">
+          <h2
+            id="hero-service-section"
+            className="mt-4 sm:text-sm md:text-2xl  font-secondary tracking-wide text-textPrimary"
+          >
             {slugData.subTitle}
           </h2>
-          {slugData.subTitle2 && (
-            <p className="mt-4 text-thin md:text-thin font-secondary  text-slate-300">
-              {slugData.subTitle2}
-            </p>
-          )}
-          <div className=" flex justify-center">
+
+          <div className="flex justify-center">
             <ContactButton label={slugData.ctaPrimary.label} />
           </div>
         </div>
       </section>
 
-      <section className="mt-12 mb-10 px-4 md:px-0  bg-gradient-to-b from-primary via-secondary to-primary max-h-fit">
+      <section className="mt-12 mb-10 px-4 md:px-0  bg-gradient-to-b from-primary via-secondary to-primary max-h-fit flex flex-col items-center justify-center text-left">
+        {slugData.tagline && (
+          <p className="m-4 text-thin md:text-thin font-secondary max-w-4xl text-slate-300">
+            {slugData.tagline}
+          </p>
+        )}
         <div className="sticky max-w-4xl max-h-fit mx-auto bg-white/10 rounded-xl shadow-lg p-8 border border-white/20 backdrop-blur-md">
           <h2 className="text-2xl md:text-3xl font-primary font-semibold uppercase tracking-wide text-highlight mb-6 text-center">
             O que você precisa saber?

@@ -1,0 +1,4 @@
+#hero-service-section {
+  text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary),
+    -1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
+}
