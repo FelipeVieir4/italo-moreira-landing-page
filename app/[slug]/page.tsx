@@ -58,11 +58,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
             {slugData.subTitle}
           </h2>
 
-          <div className="flex justify-center">
-            <ContactButton
-              id="hero-cta-button" // ANIMAÇÃO BOTÃO HERO
-              label={slugData.ctaPrimary.label}
-            />
+          <div id="hero-cta-button" className="flex justify-center">
+            <ContactButton label={slugData.ctaPrimary.label} />
           </div>
         </div>
       </section>
@@ -91,7 +88,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
             ) : (
               slugData.description.map((desc, idx) => (
                 <div key={idx} className="mb-4">
-                  <p className="mb-2 leading-relaxed font-secondary">{desc.p}</p>
+                  <p className="mb-2 leading-relaxed font-secondary">
+                    {desc.p}
+                  </p>
                   {desc.ul && desc.ul.length > 0 && (
                     <ul className="list-disc list-inside ml-6 mb-2 space-y-1 text-highlight font-secondary">
                       {desc.ul.map((item, i) => (
@@ -102,7 +101,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     </ul>
                   )}
                   {desc.p2 && (
-                    <p className="mt-2 leading-relaxed font-secondary">{desc.p2}</p>
+                    <p className="mt-2 leading-relaxed font-secondary">
+                      {desc.p2}
+                    </p>
                   )}
                 </div>
               ))
@@ -188,9 +189,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
       </section>
 
       <Footer />
-      
     </div>
   );
 }
-
-
