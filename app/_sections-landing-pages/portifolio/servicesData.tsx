@@ -105,6 +105,6 @@ export const services = [
     title: "Defesa do Consumidor",
     description:
       "Defesa em processos relacionados ao consumo, incluindo ações de indenização, revisão de contratos e proteção contra práticas abusivas. Foco na defesa dos direitos do consumidor.",
-    route: "/defesa-do-consumidor",
+    route: "/defesa-consumidor",
   },
 ];
