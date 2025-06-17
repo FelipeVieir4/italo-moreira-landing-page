@@ -35,7 +35,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
       {/* HERO */}
       <section className="mt-10 relative h-[60vh] w-full flex items-center justify-center">
-        
         <Image
           src={slugData.heroImage}
           alt={`Imagem de fundo do serviço ${slugData.title}`}
@@ -47,30 +46,40 @@ export default async function ServicePage({ params }: ServicePageProps) {
         <div className="absolute top-0 left-0 w-full h-full  bg-primary opacity-40"></div>
         <div className="relative z-10 px-4 w-full h-full p-8  shadow-lg  flex flex-col items-center justify-center text-center">
           <h1
-            id="hero-service-section"
+            id="hero-service-section" // ANIMAÇÃO HERO TITLE
             className="text-5xl md:text-7xl font-primary font-bold uppercase tracking-wide"
           >
             {slugData.title}
           </h1>
           <h2
+            id="hero-service-subtitle" // ANIMAÇÃO HERO SUBTITLE
             className="mt-4 text-lg md:text-2xl  font-secondary tracking-wide text-textPrimary "
           >
             {slugData.subTitle}
           </h2>
 
           <div className="flex justify-center">
-            <ContactButton label={slugData.ctaPrimary.label} />
+            <ContactButton
+              id="hero-cta-button" // ANIMAÇÃO BOTÃO HERO
+              label={slugData.ctaPrimary.label}
+            />
           </div>
         </div>
       </section>
 
       <section className="mt-12 mb-10 px-4 md:px-0  bg-gradient-to-b from-primary via-secondary to-primary max-h-fit flex flex-col items-center justify-center text-left">
         {slugData.tagline && (
-          <p className="m-4 text-thin md:text-thin font-secondary max-w-4xl text-slate-300">
+          <p
+            id="tagline-text" // ANIMAÇÃO TAGLINE
+            className="m-4 text-thin md:text-thin font-secondary max-w-4xl text-slate-300"
+          >
             {slugData.tagline}
           </p>
         )}
-        <div className="sticky max-w-4xl max-h-fit mx-auto bg-primary rounded-xl shadow-lg p-8 border border-white/20 backdrop-blur-sm">
+        <div
+          id="info-section" // você pode criar animação se quiser (no seu CSS atual não tem)
+          className="sticky max-w-4xl max-h-fit mx-auto bg-primary rounded-xl shadow-lg p-8 border border-white/20 backdrop-blur-sm"
+        >
           <h2 className="text-2xl md:text-3xl font-primary font-semibold uppercase tracking-wide text-highlight mb-6 text-center">
             O que você precisa saber?
           </h2>
@@ -82,9 +91,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             ) : (
               slugData.description.map((desc, idx) => (
                 <div key={idx} className="mb-4">
-                  <p className="mb-2 leading-relaxed font-secondary">
-                    {desc.p}
-                  </p>
+                  <p className="mb-2 leading-relaxed font-secondary">{desc.p}</p>
                   {desc.ul && desc.ul.length > 0 && (
                     <ul className="list-disc list-inside ml-6 mb-2 space-y-1 text-highlight font-secondary">
                       {desc.ul.map((item, i) => (
@@ -95,9 +102,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     </ul>
                   )}
                   {desc.p2 && (
-                    <p className="mt-2 leading-relaxed font-secondary">
-                      {desc.p2}
-                    </p>
+                    <p className="mt-2 leading-relaxed font-secondary">{desc.p2}</p>
                   )}
                 </div>
               ))
@@ -116,7 +121,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             className="object-cover"
             style={{
               filter: "invert(80%) sepia(1) saturate(5) hue-rotate(180deg)",
-            }} // Ajuste os valores conforme desejado
+            }}
           />
         </div>
 
@@ -124,7 +129,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
           Por que escolher nossos serviços?
         </h2>
 
-        <ul className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+        <ul
+          id="benefits-list" // ANIMAÇÃO BENEFÍCIOS (lista)
+          className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 text-left"
+        >
           {slugData.benefits.map((benefit, i) => (
             <li
               key={i}
@@ -142,7 +150,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
       {/* CTA SECUNDÁRIO */}
       <section
-        id="contato"
+        id="secondary-cta-section" // ANIMAÇÃO CTA SECUNDÁRIO
         className="py-16 bg-gradient-to-b from-secondary via-gray-800 to-secondary text-textPrimary text-center px-4"
       >
         <h2 className="font-primary text-3xl md:text-4xl uppercase mb-4">
@@ -158,33 +166,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
       </section>
 
       {/* FAQ */}
-      {/* <section className="py-16 px-6 md:px-12 bg-muted text-textSecondary">
-        <h2 className="text-3xl font-bold text-center mb-8 uppercase">
-          Perguntas Frequentes
-        </h2>
-        <div className="max-w-3xl mx-auto space-y-4">
-          {slugData.faq.map((faq, i) => (
-            <details
-              key={i}
-              className="bg-secondary text-textPrimary rounded-lg p-4 transition hover:bg-primary"
-            >
-              <summary className="cursor-pointer text-lg font-medium focus:outline-none focus:ring-2 focus:ring-highlight">
-                {faq.question}
-              </summary>
-              <p className="mt-2 text-sm text-textPrimary font-secondary leading-relaxed">
-                {faq.answer}
-              </p>
-
-              {"cta" in faq && faq.cta && (
-                <p className="mt-2 text-sm text-textPrimary font-secondary leading-relaxed">
-                  {faq.cta}
-                </p>
-              )}
-            </details>
-          ))}
-        </div>
-      </section> */}
-
       <section className="py-16 px-6 md:px-12 bg-muted text-textSecondary">
         <FaqComponent
           faqData={slugData.faq.map(
@@ -205,7 +186,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
           )}
         />
       </section>
+
       <Footer />
+      
     </div>
   );
 }
+
+

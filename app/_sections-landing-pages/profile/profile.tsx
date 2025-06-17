@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import ContactButton from "@/components/btn-Contact/btn-contact";
+import { motion } from "motion/react";
 
 const ProfileSection: React.FC = () => {
   return (
@@ -14,25 +15,36 @@ const ProfileSection: React.FC = () => {
         <Image
           src="./profile/law-office-bg.jpg"
           alt="Fundo do escritório de advocacia"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
           priority
         />
       </div>
 
       <div className="absolute inset-0 -z-10 h-full w-full bg-primary opacity-70"></div>
 
-      {/* Background Image */}
-      <div className="absolute inset-0 -z-10 h-full w-full "></div>
-
-      {/* Container principal */}
-      <div className="bg-primary bg-opacity-75 flex justify-center items-center max-w-screen-xl w-full p-8 rounded-lg shadow-lg">
+      {/* Container principal animado */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="bg-primary bg-opacity-75 flex justify-center items-center max-w-screen-xl w-full p-8 rounded-lg shadow-lg"
+      >
         <div className="text-white w-full flex flex-col gap-6">
           <div className="flex-1 text-clip">
             <h3 className="text-xl md:text-2xl font-primary font-bold text-highlight mb-4">
               Quem vai te atender?
             </h3>
-            <div className="border-4 border-secondary rounded-lg overflow-hidden bg-slate-300 shadow-lg w-fit h-fit text-[8px] md:text-sm float-left mr-2">
+
+            {/* Avatar com zoom-in */}
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="border-4 border-secondary rounded-lg overflow-hidden bg-slate-300 shadow-lg w-fit h-fit text-[8px] md:text-sm float-left mr-2"
+            >
               <Image
                 src="./profile/hero-avatar2.png"
                 alt="Foto do Dr. Italo Moreira"
@@ -40,7 +52,8 @@ const ProfileSection: React.FC = () => {
                 width={150}
                 className="object-cover"
               />
-            </div>
+            </motion.div>
+
             <p className="text-thin text-textPrimary leading-relaxed font-secondary mb-4">
               Sou um advogado com sólida formação e ampla experiência nas áreas
               cível, criminal e na resolução de conflitos extrajudiciais. Com um
@@ -66,12 +79,17 @@ const ProfileSection: React.FC = () => {
               tranquilidade.
             </p>
 
-            <div className="mt-4 flex justify-center">
+            {/* Botão com hover animado */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="mt-4 flex justify-center"
+            >
               <ContactButton label="Fale comigo agora!" />
-            </div>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
