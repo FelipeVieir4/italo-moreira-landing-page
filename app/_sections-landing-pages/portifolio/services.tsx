@@ -50,7 +50,7 @@ const ServicesSection: React.FC = () => {
                   alt={service.image.alt}
                   className="min-w-[32px] min-h-[32px]"
                 />
-                <span className="flex-1 text-muted font-primary tracking-wide">
+                <span className="flex-1 text-lg md:text-xl text-muted font-primary tracking-wide">
                   {service.title}
                 </span>
               </li>

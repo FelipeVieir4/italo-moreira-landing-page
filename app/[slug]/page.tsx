@@ -53,7 +53,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
             {slugData.title}
           </h1>
           <h2
-            id="hero-service-section"
             className="mt-4 text-lg md:text-2xl  font-secondary tracking-wide text-textPrimary "
           >
             {slugData.subTitle}

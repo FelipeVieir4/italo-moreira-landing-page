@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
             advocacia especializada
           </h1>
           {/* Subtítulo */}
-          <p  id="hero-text" className="font-secondary text-textPrimary text-lg md:text-xl md:max-w-2xl lg:max-w-4xl mt-4 text-center px-6  ">
+          <p className="font-secondary text-textPrimary text-lg md:text-xl md:max-w-2xl lg:max-w-4xl mt-4 text-center px-6  ">
             Compromisso em oferecer tranquilidade e segurança jurídica, com
             soluções eficientes e alinhadas aos seus direitos
           </p>
