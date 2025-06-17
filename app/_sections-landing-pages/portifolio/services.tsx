@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { services } from "./servicesData";
-import { motion } from "motion/react";
+import { motion, easeInOut } from "motion/react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -11,7 +11,7 @@ const fadeUp = {
     y: 0,
     transition: {
       duration: 0.9,
-      ease: "easeOut",
+      ease: easeInOut,
     },
   },
 };

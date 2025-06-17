@@ -3,7 +3,7 @@ import React from "react";
 import ContactButton from "@/components/btn-Contact/btn-contact";
 import Image from "next/image";
 import "./hero-section.css";
-import { motion } from "motion/react";
+import { motion, easeInOut } from "motion/react";
 
 const container = {
   hidden: {},
@@ -22,7 +22,7 @@ const fadeUp = {
     y: 0,
     transition: {
       duration: 1.2,
-      ease: "easeOut",
+      ease: easeInOut,
     },
   },
 };
