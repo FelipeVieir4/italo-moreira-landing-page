@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import Navbar from "@/components/navbar/navbar";
+// import Navbar from "@/components/navbar/navbar";
 import Image from "next/image";
 import { servicesData } from "./servicesData";
 import ContactButton from "@/components/btn-Contact/btn-contact";
