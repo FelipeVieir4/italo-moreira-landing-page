@@ -6,7 +6,7 @@ import ContactButton from "@/components/btn-Contact/btn-contact";
 import WhatsAppFloatingButton from "@/components/btn-WhatsAppFloatingButton/WhatsAppFloatingButton";
 import Footer from "../_sections-landing-pages/footer/footer";
 import FaqComponent from "@/components/faq/faq-component";
-import GoogleRatingPage from "../_sections-landing-pages/google-rating/page";
+// import GoogleRatingPage from "../_sections-landing-pages/google-rating/page";
 import "./page.css";
 import Link from "next/link";
 
