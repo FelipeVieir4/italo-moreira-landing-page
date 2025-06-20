@@ -20,7 +20,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <ProfileSection />
-      <GoogleRatingPage />
+      {/* <GoogleRatingPage /> */}
       <LocationPage />
       {/* <Testimonials /> */}
       <FAQSection />

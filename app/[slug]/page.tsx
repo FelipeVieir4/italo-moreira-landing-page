@@ -8,6 +8,7 @@ import Footer from "../_sections-landing-pages/footer/footer";
 import FaqComponent from "@/components/faq/faq-component";
 import GoogleRatingPage from "../_sections-landing-pages/google-rating/page";
 import "./page.css";
+import Link from "next/link";
 
 const validSlugs = Object.keys(servicesData);
 
@@ -28,13 +29,38 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   const slugData = servicesData[slug as keyof typeof servicesData];
 
+  const menuText = ["Italo Moreira", "Advocacia"];
+  const menuLogo = "./logo/logo-white.png";
+
   return (
-    <div className="bg-primary text-white ">
-      <Navbar />
+    <div className=" relative bg-primary text-white ">
+      <div className="absolute top-6 left-16 z-50 flex items-center gap-4">
+        <Image
+          width={50}
+          height={50}
+          src={menuLogo}
+          alt="Italo Moreira Advocacia"
+        />
+        <Link href="/#">
+          <div className="flex gap-4 items-center text-2xl">
+        {menuText.map((text, index) => (
+          <p
+            key={index}
+            className="text-muted last:border-l-2 border-gray-300 last:pl-4 last:text-lg last:hidden sm:last:block uppercase font-primary"
+          >
+            {text}
+          </p>
+        ))}
+          </div>
+        </Link>
+      </div>
+    
+
+      {/* <Navbar /> */}
       <WhatsAppFloatingButton />
 
       {/* HERO */}
-      <section className="mt-10 relative h-[60vh] w-full flex items-center justify-center">
+      <section className="relative h-[70vh] w-full flex items-center justify-center">
         <Image
           src={slugData.heroImage}
           alt={`Imagem de fundo do serviço ${slugData.title}`}
@@ -147,7 +173,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </ul>
       </section>
 
-      <GoogleRatingPage />
+      {/* <GoogleRatingPage /> */}
 
       {/* CTA SECUNDÁRIO */}
       <section
