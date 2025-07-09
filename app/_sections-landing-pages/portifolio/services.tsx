@@ -2,19 +2,9 @@
 import React from "react";
 import Image from "next/image";
 import { services } from "./servicesData";
-import { motion, easeInOut } from "motion/react";
+import { motion } from "motion/react";
+import { fadeUp } from "./animation";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.9,
-      ease: easeInOut,
-    },
-  },
-};
 
 const ServicesSection: React.FC = () => {
   return (

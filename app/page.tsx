@@ -8,7 +8,7 @@ import ProfileSection from "./_sections-landing-pages/profile/profile";
 import FAQSection from "./_sections-landing-pages/FAQ/faq";
 import WhatsAppFloatingButton from "@/components/btn-WhatsAppFloatingButton/WhatsAppFloatingButton";
 import LocationPage from "./_sections-landing-pages/location/page";
-// import GoogleRatingPage from "./_sections-landing-pages/google-rating/page";
+import GoogleRatingPage from "./_sections-landing-pages/google-rating/page";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <ProfileSection />
-      {/* <GoogleRatingPage /> */}
+      <GoogleRatingPage />
       <LocationPage />
       {/* <Testimonials /> */}
       <FAQSection />
