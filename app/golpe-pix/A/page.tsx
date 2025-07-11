@@ -172,7 +172,7 @@ export default function GolpePixPage() {
 
         <div className="absolute right-0 bottom-0 colapse-0 hidden sm:block">
           <Image
-            src="/services-pages-img/cell-pix.png"
+            src="/services-pages-img/cell-pix.jpg"
             alt="Advogado especialista em golpes bancários"
             width={400}
             height={400}
