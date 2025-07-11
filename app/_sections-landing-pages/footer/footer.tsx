@@ -12,7 +12,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <Image
-              src="./footer/linkedin-icon.svg"
+              src="/footer/linkedin-icon.svg"
               alt="LinkedIn"
               width={24}
               height={24}
@@ -25,7 +25,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <Image
-              src="./footer/instagram-icon.svg"
+              src="/footer/instagram-icon.svg"
               alt="Instagram"
               width={24}
               height={24}
@@ -38,7 +38,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <Image
-              src="./footer/facebook-icon.svg"
+              src="/footer/facebook-icon.svg"
               alt="Facebook"
               width={24}
               height={24}
