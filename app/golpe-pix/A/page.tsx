@@ -163,6 +163,7 @@ export default function GolpePixPage() {
           <Image
             src="/services-pages-img/cell-pix.webp"
             alt="Advogado especialista em golpes bancários"
+            priority
             width={400}
             height={400}
           />
@@ -175,6 +176,7 @@ export default function GolpePixPage() {
             src="/services/Patterns.svg"
             alt="Imagem de fundo"
             fill
+            priority
             className="object-cover"
             style={{
               filter: "invert(80%) sepia(1) saturate(5) hue-rotate(180deg)",
