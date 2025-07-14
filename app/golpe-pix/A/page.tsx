@@ -43,9 +43,9 @@ export default function GolpePixPage() {
       <WhatsAppFloatingButton />
 
       {/* HERO */}
-      <section className="relative max-h-fit min-h-[60vh] sm:h-[70vh] w-full flex items-center justify-center">
+      <section className="relative max-h-fit min-h-[75vh] sm:h-[70vh] w-full flex items-center justify-center">
         <Image
-          src="/services-pages-img/golpe-pix-hero.jpg"
+          src="/services-pages-img/golpe-pix-hero.webp"
           alt="Caiu no golpe do PIX?"
           fill
           priority
@@ -98,47 +98,36 @@ export default function GolpePixPage() {
       {/* O QUE FAZER AGORA */}
       <section className="mt-8 sm:mt-12 mb-8 sm:mb-10 px-2 sm:px-4 md:px-0 bg-gradient-to-b from-primary via-secondary to-primary max-h-fit flex flex-col items-center justify-center text-left">
         <div className="sticky max-w-3xl sm:max-w-6xl max-h-fit mx-auto bg-primary rounded-xl shadow-lg p-4 sm:p-8 border border-white/20 backdrop-blur-sm">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-primary font-semibold uppercase tracking-wide text-highlight mb-4 sm:mb-6 text-center">
-            Passo a passo imediato para recuperar seu dinheiro:
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-primary font-semibold tracking-wide text-highlight mb-4 sm:mb-6 text-center">
+            O que você deve fazer <span className="uppercase border-b border-red">agora</span> para tentar recuperar seu dinheiro:
           </h2>
           <ol className="list-decimal list-inside space-y-2 sm:space-y-4 text-base sm:text-lg font-secondary text-textPrimary">
             <li>
               <span className="font-bold">
-                Acesse o aplicativo do seu banco imediatamente
+                Converse comigo, um advogado especialista em golpes bancários.
               </span>
               <br />
-              Solicite{" "}
-              <strong>
-                o bloqueio e a devolução via Mecanismo Especial de Devolução
-                (MED)
-              </strong>
-              . Anote o protocolo.
+             O atendimento é rápido, online e gratuito via whatsApp.
             </li>
             <li>
               <span className="font-bold">
-                Ligue para o Banco Central (BACEN):
+               Acesse o aplicativo do seu banco imediatamente.
               </span>
               <br />
-              Informe os dados do golpe. Tel: <strong>145</strong> — Atendimento
-              de segunda a sexta, das 8h às 20h.
+              Solicite bloqueio e devolução via Mecanismo Especial de Devolução (MED). Anote o número do protocolo.
             </li>
             <li>
               <span className="font-bold">
-                Registre um Boletim de Ocorrência:
+               Ligue para o Banco Central (BACEN).
               </span>
               <br />
-              Compareça à delegacia mais próxima ou faça online no site da
-              polícia do seu estado. Guarde o número da ocorrência.
+             Informe os dados da transação e do golpe. Telefone: 145 – Atendimento de segunda a sexta, das 8h às 20h.
             </li>
             <li>
               <span className="font-bold">
-                Converse comigo - advogado especialista em golpes bancários
+                Registre um Boletim de Ocorrência (BO).
               </span>
-              <br />O atendimento é{" "}
-              <span className="font-bold text-highlight">
-                rápido, online e gratuito
-              </span>{" "}
-              via whatsApp.
+              <br />Compareça à delegacia mais próxima ou faça online no site da polícia do seu estado. Guarde o número da ocorrência.
             </li>
           </ol>
           <div className="flex justify-center mt-6 sm:mt-8">
@@ -170,9 +159,9 @@ export default function GolpePixPage() {
           </div>
         </div>
 
-        <div className="absolute right-0 bottom-0 colapse-0 hidden sm:block">
+        <div className="absolute right-0 bottom-0 colapse-0 hidden xl:block">
           <Image
-            src="/services-pages-img/cell-pix.jpg"
+            src="/services-pages-img/cell-pix.webp"
             alt="Advogado especialista em golpes bancários"
             width={400}
             height={400}
@@ -200,19 +189,19 @@ export default function GolpePixPage() {
           Veja o que eu posso fazer por você:
         </p>
         <ul className="max-w-2xl sm:max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 text-left">
-          <li className="bg-slate-200 p-3 sm:p-4 rounded-lg border-l-4 border-secondary">
+          <li className="bg-slate-200 p-3 sm:p-4 rounded-lg border-l-4 border-secondary text-lg">
             Acionar judicialmente o banco por falha na segurança
           </li>
-          <li className="bg-slate-200 p-3 sm:p-4 rounded-lg border-l-4 border-secondary">
+          <li className="bg-slate-200 p-3 sm:p-4 rounded-lg border-l-4 border-secondary text-lg">
             Solicitar bloqueio de valores na conta do golpista
           </li>
-          <li className="bg-slate-200 p-3 sm:p-4 rounded-lg border-l-4 border-secondary">
+          <li className="bg-slate-200 p-3 sm:p-4 rounded-lg border-l-4 border-secondary text-lg">
             Ativar mecanismos legais de devolução via BacenJud
           </li>
-          <li className="bg-slate-200 p-3 sm:p-4 rounded-lg border-l-4 border-secondary">
+          <li className="bg-slate-200 p-3 sm:p-4 rounded-lg border-l-4 border-secondary text-lg">
             Atuar para obtenção de indenização por danos morais e materiais
           </li>
-          <li className="bg-slate-200 p-3 sm:p-4 rounded-lg border-l-4 border-secondary">
+          <li className="bg-slate-200 p-3 sm:p-4 rounded-lg border-l-4 border-secondary text-lg">
             Acompanhar todo o processo com transparência
           </li>
         </ul>
