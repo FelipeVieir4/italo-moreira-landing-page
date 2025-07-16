@@ -6,7 +6,7 @@ import Link from "next/link";
 import FAQComponent from "@/components/faq/faq-component";
 import { faqData } from "./faqData";
 import "./page.css";
-import GoogleRatingPage from "@/app/_sections-landing-pages/google-rating/page";
+// import GoogleRatingPage from "@/app/_sections-landing-pages/google-rating/page";
 
 const menuText = ["Italo Moreira", "Advocacia"];
 const menuLogo = "/logo/logo-white.png";
