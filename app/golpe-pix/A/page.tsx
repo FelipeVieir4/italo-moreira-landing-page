@@ -63,7 +63,7 @@ export default function GolpePixPage() {
               Caiu no golpe do PIX?
             </h1>
             <h2 className="mt-2 sm:mt-4 text-base sm:text-lg md:text-2xl font-secondary tracking-wide text-textPrimary">
-              Existe solução jurídica para você recuperar seu dinheiro
+              Você pode recuperar o seu dinheiro.
             </h2>
             <div className="flex flex-col gap-2 mt-4 sm:mt-6 max-w-screen-lg bg-primary/85 p-2 rounded-lg">
               <p className="text-base sm:text-lg md:text-xl font-secondary">
@@ -81,7 +81,7 @@ export default function GolpePixPage() {
               <ContactButton label={whatsappLabel} />
             </div>
             <p className="mt-2 text-sm sm:text-base font-secondary">
-              Atendimento rápido direto via WhatsApp.
+              Clique para falar direto com o advogado no WhatsApp
             </p>
           </div>
         </div>
@@ -98,13 +98,7 @@ export default function GolpePixPage() {
           <ol className="list-decimal list-inside space-y-2 sm:space-y-4 text-base sm:text-lg font-secondary text-textPrimary">
             <li>
               <span className="font-bold">
-                Converse comigo, um advogado especialista em golpes bancários.
-              </span>
-              <br />O atendimento é rápido, online e gratuito via whatsApp.
-            </li>
-            <li>
-              <span className="font-bold">
-                Acesse o aplicativo do seu banco imediatamente.
+                Acesse o aplicativo do seu banco imediatamente
               </span>
               <br />
               Solicite bloqueio e devolução via Mecanismo Especial de Devolução
@@ -112,19 +106,26 @@ export default function GolpePixPage() {
             </li>
             <li>
               <span className="font-bold">
-                Ligue para o Banco Central (BACEN).
+                Ligue para o Banco Central (BACEN). Telefone: 145
               </span>
               <br />
-              Informe os dados da transação e do golpe. Telefone: 145 –
-              Atendimento de segunda a sexta, das 8h às 20h.
+              Informe os dados da transação e do golpe. Atendimento de segunda a
+              sexta, das 8h às 20h.
             </li>
             <li>
               <span className="font-bold">
-                Registre um Boletim de Ocorrência (BO).
+                Registre um Boletim de Ocorrência
               </span>
               <br />
               Compareça à delegacia mais próxima ou faça online no site da
               polícia do seu estado. Guarde o número da ocorrência.
+            </li>
+
+            <li>
+              <span className="font-bold">
+                Converse comigo - advogado especialista em golpes bancários
+              </span>
+              <br />O atendimento é rápido, online e gratuito via WhatsApp.
             </li>
           </ol>
           <div className="flex justify-center mt-6 sm:mt-8">
@@ -145,7 +146,7 @@ export default function GolpePixPage() {
             Fale agora com um advogado especialista em golpes bancários
           </h2>
           <p className="text-base sm:text-lg md:text-xl font-secondary mb-1 sm:mb-2 bg-secondary max-w-fit">
-            Atendimento rápido, com respeito e segurança ao falar com um
+            Atendimento <span className="text-highlight">rápido</span>, com <span className="text-highlight">respeito</span> e <span className="text-highlight">segurança</span> ao falar com um
             advogado que resolve!
           </p>
           <p className="text-base sm:text-lg font-secondary bg-secondary max-w-fit">
@@ -204,8 +205,8 @@ export default function GolpePixPage() {
           ))}
         </ul>
         <p className="mt-4 sm:mt-8 text-base sm:text-lg font-secondary text-center">
-          Já ajudei diversos clientes a reverter perdas.{" "}
-          <span className="text-highlight rounded ">Agora é a sua vez.</span>
+         Já ajudei diversas pessoas a recuperarem valores perdidos. O próximo será
+          <span className="text-highlight rounded uppercase "> você!</span>
         </p>
         <div className="flex justify-center mt-4 sm:mt-8">
           <ContactButton label={whatsappLabel3} />
@@ -228,7 +229,7 @@ export default function GolpePixPage() {
           <span className="text-red-500"> esperar demais</span>
         </h2>
         <p className="text-xs sm:text-sm md:text-lg max-w-2xl sm:max-w-4xl mx-auto font-secondary">
-          Quanto mais você espera, mais difícil fica rastrear o seu dinheiro e
+          Quanto mais você espera, <span className="text-red-400">mais difícil fica rastrear o seu dinheiro</span> e
           recuperá-lo. Os bancos agem com rapidez, mas depende de você dar o
           primeiro passo — e sem orientação jurídica, você perderá a chance de
           recuperar o que é seu
@@ -269,7 +270,7 @@ export default function GolpePixPage() {
         </p>
       </section>
 
-      <GoogleRatingPage />
+      {/* <GoogleRatingPage /> */}
       <Footer />
     </div>
   );
