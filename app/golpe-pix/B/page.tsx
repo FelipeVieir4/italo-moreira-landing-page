@@ -98,6 +98,12 @@ export default function GolpePixPage() {
           <ol className="list-decimal list-inside space-y-2 sm:space-y-4 text-base sm:text-lg font-secondary text-textPrimary">
             <li>
               <span className="font-bold">
+                Converse comigo - advogado especialista em golpes bancários
+              </span>
+              <br />O atendimento é rápido, online e gratuito via WhatsApp.
+            </li>
+            <li>
+              <span className="font-bold">
                 Acesse o aplicativo do seu banco imediatamente
               </span>
               <br />
@@ -120,13 +126,6 @@ export default function GolpePixPage() {
               Compareça à delegacia mais próxima ou faça online no site da
               polícia do seu estado. Guarde o número da ocorrência.
             </li>
-
-            <li>
-              <span className="font-bold">
-                Converse comigo - advogado especialista em golpes bancários
-              </span>
-              <br />O atendimento é rápido, online e gratuito via WhatsApp.
-            </li>
           </ol>
           <div className="flex justify-center mt-6 sm:mt-8">
             <ContactButton label={whatsappLabel2} />
@@ -146,7 +145,9 @@ export default function GolpePixPage() {
             Fale agora com um advogado especialista em golpes bancários
           </h2>
           <p className="text-base sm:text-lg md:text-xl font-secondary mb-1 sm:mb-2 bg-secondary max-w-fit">
-            Atendimento <span className="text-highlight">rápido</span>, com <span className="text-highlight">respeito</span> e <span className="text-highlight">segurança</span> ao falar com um
+            Atendimento <span className="text-highlight">rápido</span>, com{" "}
+            <span className="text-highlight">respeito</span> e{" "}
+            <span className="text-highlight">segurança</span> ao falar com um
             advogado que resolve!
           </p>
           <p className="text-base sm:text-lg font-secondary bg-secondary max-w-fit">
@@ -205,7 +206,8 @@ export default function GolpePixPage() {
           ))}
         </ul>
         <p className="mt-4 sm:mt-8 text-base sm:text-lg font-secondary text-center">
-         Já ajudei diversas pessoas a recuperarem valores perdidos. O próximo será
+          Já ajudei diversas pessoas a recuperarem valores perdidos. O próximo
+          será
           <span className="text-highlight rounded uppercase "> você!</span>
         </p>
         <div className="flex justify-center mt-4 sm:mt-8">
@@ -229,8 +231,11 @@ export default function GolpePixPage() {
           <span className="text-red-500"> esperar demais</span>
         </h2>
         <p className="text-xs sm:text-sm md:text-lg max-w-2xl sm:max-w-4xl mx-auto font-secondary">
-          Quanto mais você espera, <span className="text-red-400">mais difícil fica rastrear o seu dinheiro</span> e
-          recuperá-lo. Os bancos agem com rapidez, mas depende de você dar o
+          Quanto mais você espera,{" "}
+          <span className="text-red-400">
+            mais difícil fica rastrear o seu dinheiro
+          </span>{" "}
+          e recuperá-lo. Os bancos agem com rapidez, mas depende de você dar o
           primeiro passo — e sem orientação jurídica, você perderá a chance de
           recuperar o que é seu
         </p>
