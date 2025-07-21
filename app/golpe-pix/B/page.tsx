@@ -6,7 +6,7 @@ import Link from "next/link";
 import FAQComponent from "@/components/faq/faq-component";
 import { faqData } from "./faqData";
 import "./page.css";
-import GoogleRatingPage from "@/app/_sections-landing-pages/google-rating/page";
+// import GoogleRatingPage from "@/app/_sections-landing-pages/google-rating/page";
 
 const menuText = ["Italo Moreira", "Advocacia"];
 const menuLogo = "/logo/logo-white.png";
@@ -21,14 +21,14 @@ export default function GolpePixPage() {
 
       {/* HERO SECTION */}
       <section className="relative min-h-fit w-full flex items-center justify-center">
-        <Image
+        {/* <Image
           src="/services-pages-img/golpe-pix-hero.webp"
           alt="Caiu no golpe do PIX?"
           fill
           priority
           sizes="100vw"
           className="object-cover opacity-40"
-        />
+        /> */}
 
         <div className="h-full w-full flex flex-col justify-between">
           {/* Menu */}
@@ -275,7 +275,7 @@ export default function GolpePixPage() {
         </p>
       </section>
 
-      <GoogleRatingPage />
+      {/* <GoogleRatingPage /> */}
       <Footer />
     </div>
   );
