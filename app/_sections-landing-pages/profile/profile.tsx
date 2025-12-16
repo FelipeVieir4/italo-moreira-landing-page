@@ -45,12 +45,13 @@ const ProfileSection: React.FC = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="border-4 border-secondary rounded-lg overflow-hidden bg-slate-300 shadow-lg w-fit h-fit text-[8px] md:text-sm float-left mr-2"
             >
-              <Image
-                src="./profile/hero-avatar2.png"
-                alt="Foto do Dr. Italo Moreira"
-                height={150}
-                width={150}
-                className="object-cover"
+              <motion.img
+              src="./profile/_55A2773.jpg"
+              alt="Foto do Dr. Italo Moreira"
+              height={200}
+              width={200}
+              className="object-cover"
+              whileInView={{ scale: 1.25, opacity: 1 }}
               />
             </motion.div>
 
