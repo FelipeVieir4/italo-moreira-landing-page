@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
             <span className="text-white font-primary text-base md:text-lg font-semibold tracking-wide">
               Italo Moreira
             </span>
-            <span className="text-highlight/70 text-[10px] font-secondary tracking-[0.2em] uppercase">
+            <span className="text-highlight/70 text-[10px] font-secondary tracking-[0.2em] uppercase bg-white/70 w-min p-1">
               Advocacia
             </span>
           </div>

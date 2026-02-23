@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
           {/* Eyebrow — texto pequeno, fundo ~100% opaco = gold legível */}
           <motion.div variants={fadeUp} className="flex items-center gap-3 mb-8">
             <span className="block w-10 h-px bg-highlight" aria-hidden="true" />
-            <span className="text-highlight font-secondary text-xs uppercase tracking-[0.25em]">
+            <span className="text-white/60 font-secondary text-xs uppercase tracking-[0.25em]  ">
               Advocacia Especializada
             </span>
           </motion.div>
@@ -79,7 +79,7 @@ const HeroSection: React.FC = () => {
             {/* "seus direitos" — gold com text-shadow escuro para contraste real */}
             <span
               className="italic font-bold text-highlight"
-              style={{ textShadow: "0 2px 12px rgba(2,6,23,0.95), 0 0 40px rgba(2,6,23,0.8)" }}
+              style={{ textShadow: "0 2px 12px rgba(2, 6, 23, 0.493), 0 0 40px rgba(2, 6, 23, 0.692)" }}
             >
               seus direitos
             </span>
@@ -97,7 +97,7 @@ const HeroSection: React.FC = () => {
           {/* Subtitle */}
           <motion.p
             variants={fadeUp}
-            className="font-secondary text-white/70 text-base md:text-lg max-w-lg leading-relaxed mb-8"
+            className="font-secondary text-white text-base md:text-lg max-w-lg leading-relaxed mb-8 bg-primary/50 p-1"
           >
             Compromisso em oferecer tranquilidade e segurança jurídica, com
             soluções eficientes e alinhadas aos seus direitos.
@@ -114,7 +114,7 @@ const HeroSection: React.FC = () => {
               <span
                 key={c}
                 role="listitem"
-                className="border border-highlight/40 text-highlight/90 text-[11px] font-secondary uppercase tracking-wider px-3 py-1.5"
+                className="border border-highlight/40 text-highlight/90 text-[11px] font-secondary uppercase tracking-wider px-3 py-1.5 bg-white/70"
               >
                 {c}
               </span>
@@ -137,7 +137,7 @@ const HeroSection: React.FC = () => {
         aria-hidden="true"
       >
         <span className="text-white/30 text-[10px] font-secondary uppercase tracking-[0.3em]">
-          scroll
+          mais
         </span>
         <motion.div
           animate={{ y: [0, 10, 0] }}
