@@ -76,8 +76,11 @@ const HeroSection: React.FC = () => {
           >
             Defendendo
             <br />
-            {/* "seus direitos" em itálico branco + sublinhado dourado */}
-            <span className="italic font-semibold border-b-2 border-highlight pb-1">
+            {/* "seus direitos" — gold com text-shadow escuro para contraste real */}
+            <span
+              className="italic font-bold text-highlight"
+              style={{ textShadow: "0 2px 12px rgba(2,6,23,0.95), 0 0 40px rgba(2,6,23,0.8)" }}
+            >
               seus direitos
             </span>
             <br />
