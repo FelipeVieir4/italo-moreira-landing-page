@@ -26,12 +26,11 @@
 } */
 
 body {
-  height: 100vh;
   color: var(--text-color);
   background: var(--muted);
-  font-family: --font-family-primary
+  font-family: var(--font-family-primary);
 }
 
 p {
-  font-family: var(--font-family-secondary);
+  font-family: var(--font-family-primary);
 }

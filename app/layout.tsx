@@ -6,52 +6,135 @@ import Script from "next/script";
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-family-primary",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-family-secondary",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
+const BASE_URL = "https://www.italomoreira.adv.br";
+
 export const metadata: Metadata = {
-  title: "Dr. Italo Moreira - Advogado | Advocacia Especializada  ",
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default: "Dr. Italo Moreira — Advogado | Belo Horizonte, MG",
+    template: "%s | Dr. Italo Moreira Advocacia",
+  },
   description:
-    "Especialista em direito civil e criminal. Atendimento personalizado para suas necessidades jurídicas. Consulte um especialista hoje!",
+    "Advogado especialista em Direito Civil e Criminal em Belo Horizonte, MG. Atendimento personalizado em divórcio, danos morais, defesa do consumidor, crimes e muito mais. OAB/MG.",
   keywords: [
-    "Advocacia especializada",
-    "Advogado Dr. Italo Moreira",
-    "Direito civil",
-    "Direito criminal",
-    "Consultoria jurídica",
-    "Assessoria jurídica",
+    "advogado Belo Horizonte",
+    "advogado OAB MG",
+    "Dr. Italo Moreira",
+    "Italo Moreira advogado",
+    "advogado direito civil",
+    "advogado direito criminal",
+    "divórcio BH",
+    "danos morais advogado",
+    "defesa do consumidor advogado",
+    "golpe do PIX advogado",
+    "advocacia especializada BH",
+    "consultoria jurídica Belo Horizonte",
   ],
-  authors: [{ name: "Dr. Italo Moreira" }],
-  robots: "index, follow",
+  authors: [{ name: "Dr. Italo Moreira", url: BASE_URL }],
+  creator: "Dr. Italo Moreira",
+  publisher: "Italo Moreira Advocacia",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: BASE_URL,
+  },
   openGraph: {
-    title: "Advocacia Especializada | Dr. Italo Moreira",
+    title: "Dr. Italo Moreira — Advogado | Belo Horizonte, MG",
     description:
-      "Especialista em direito civil e criminal. Consulte um especialista hoje!",
-    url: "https://www.italomoreira.adv.br",
+      "Advogado especialista em Direito Civil e Criminal em Belo Horizonte. Atendimento personalizado, ético e eficiente. OAB/MG.",
+    url: BASE_URL,
     type: "website",
     siteName: "Dr. Italo Moreira Advocacia",
     locale: "pt_BR",
     images: [
       {
-        url: "#",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Advocacia Especializada - Dr. Italo Moreira",
+        alt: "Dr. Italo Moreira — Advogado especialista em Belo Horizonte, MG",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@",
-    creator: "@i",
-    title: "Advocacia Especializada | Dr. Italo Moreira",
+    title: "Dr. Italo Moreira — Advogado | Belo Horizonte, MG",
     description:
-      "Especialista em direito civil e criminal. Consulte um especialista hoje!",
-    images: ["#"],
+      "Advogado especialista em Direito Civil e Criminal em Belo Horizonte. Atendimento ético e eficiente. OAB/MG.",
+    images: ["/og-image.jpg"],
+  },
+};
+
+const legalServiceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": ["LegalService", "LocalBusiness"],
+  name: "Dr. Italo Moreira Advocacia",
+  description:
+    "Escritório de advocacia especializado em Direito Civil e Criminal, atendendo clientes em Belo Horizonte, MG e todo o Brasil.",
+  url: BASE_URL,
+  telephone: "+5531999369653",
+  email: "contato@italomoreira.adv.br",
+  image: `${BASE_URL}/og-image.jpg`,
+  logo: `${BASE_URL}/logo/logo-white.png`,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Belo Horizonte",
+    addressRegion: "MG",
+    addressCountry: "BR",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -19.9191,
+    longitude: -43.9386,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+  ],
+  priceRange: "$$",
+  areaServed: {
+    "@type": "State",
+    name: "Minas Gerais",
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/italomoreira9211/",
+    "https://www.instagram.com/advitalomoreira",
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Serviços Jurídicos",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Divórcio e Separação" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pensão e Guarda" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Contratos" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Danos Morais, Materiais e Estéticos" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Violência Doméstica" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Crimes Sexuais" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Crimes Patrimoniais" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tráfico de Drogas" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Defesa do Consumidor" } },
+    ],
   },
 };
 
@@ -62,32 +145,34 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-   
-        {/* <!-- Google Tag Manager --> */}
-        <Script id="gtm-head" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-W8Z26NQ8');
-          `}
-        </Script>
-        {/* <!-- End Google Tag Manager --> */}
-     
+      {/* Google Tag Manager */}
+      <Script id="gtm-head" strategy="afterInteractive">
+        {`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-W8Z26NQ8');
+        `}
+      </Script>
+      {/* JSON-LD Structured Data */}
+      <Script
+        id="jsonld-legalservice"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceJsonLd) }}
+      />
       <body
         className={`${plusJakartaSans.variable} ${playfairDisplay.variable} antialiased`}
       >
-        {/* <!-- Google Tag Manager (noscript) --> */}
+        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-W8Z26NQ8"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
+          />
         </noscript>
-        {/* <!-- End Google Tag Manager (noscript) --> */}
         {children}
       </body>
     </html>

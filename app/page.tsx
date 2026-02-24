@@ -12,10 +12,8 @@ import GoogleRatingPage from "./_sections-landing-pages/google-rating/page";
 
 export default function Home() {
   return (
-    <div className=" max-w-full h-screen w-screen">
-      <div className="mb-[10vh] ">
-        <Navbar />
-      </div>
+    <div className="max-w-full w-screen">
+      <Navbar />
       <WhatsAppFloatingButton />
       <HeroSection />
       <ServicesSection />
