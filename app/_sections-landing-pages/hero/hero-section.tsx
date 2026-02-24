@@ -10,7 +10,7 @@ const credentials = [
   "Golpe do PIX",
 ];
 
-const socialProof = ["OAB/MG", "Atendimento Online", "Primeira Consulta Gratuita"];
+const socialProof = ["OAB/MG", "Atendimento Online", "5+ anos de experiência"];
 
 const container = {
   hidden: {},

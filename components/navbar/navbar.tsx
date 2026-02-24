@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
           className="hidden xl:flex items-center gap-2 border border-highlight/60 text-highlight px-5 py-2.5 text-xs font-secondary uppercase tracking-[0.15em] hover:bg-highlight hover:text-primary transition-all duration-300"
           aria-label="Agendar consulta pelo WhatsApp"
         >
-          Consulta Gratuita
+          Falar Agora!
         </button>
 
         {/* Hamburger */}

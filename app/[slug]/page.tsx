@@ -2,13 +2,15 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Script from "next/script";
+import Link from "next/link";
+import { ChevronLeft } from "lucide-react";
 import { servicesData } from "./servicesData";
 import ContactButton from "@/components/btn-Contact/btn-contact";
 import WhatsAppFloatingButton from "@/components/btn-WhatsAppFloatingButton/WhatsAppFloatingButton";
+import Navbar from "@/components/navbar/navbar";
 import Footer from "../_sections-landing-pages/footer/footer";
 import FaqComponent from "@/components/faq/faq-component";
 import "./page.css";
-import Link from "next/link";
 
 const BASE_URL = "https://www.italomoreira.adv.br";
 const validSlugs = Object.keys(servicesData);
@@ -71,9 +73,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
     },
   };
 
-  const menuText = ["Italo Moreira", "Advocacia"];
-  const menuLogo = "./logo/logo-white.png";
-
   return (
     <div className="relative bg-primary text-white">
       <Script
@@ -82,97 +81,122 @@ export default async function ServicePage({ params }: ServicePageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
 
-      <div className="absolute top-6 left-16 z-50 flex items-center gap-4">
-        <Image
-          width={50}
-          height={50}
-          src={menuLogo}
-          alt="Italo Moreira Advocacia"
-        />
-        <Link href="/#">
-          <div className="flex gap-4 items-center text-2xl">
-            {menuText.map((text, index) => (
-              <p
-                key={index}
-                className="text-muted last:border-l-2 border-gray-300 last:pl-4 last:text-lg last:hidden sm:last:block uppercase font-primary"
-              >
-                {text}
-              </p>
-            ))}
-          </div>
-        </Link>
-      </div>
-
+      <Navbar />
       <WhatsAppFloatingButton />
 
       {/* HERO */}
-      <section className="relative h-[70vh] w-full flex items-center justify-center">
+      <section className="relative min-h-[82vh] w-full flex items-center overflow-hidden">
         <Image
           src={slugData.heroImage}
-          alt={`Imagem de fundo do serviço ${slugData.title}`}
+          alt={`${slugData.title} — Italo Moreira Advocacia`}
           fill
           priority
           sizes="100vw"
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: "cover", objectPosition: "center top", filter: "brightness(0.65)" }}
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-primary opacity-40" />
-        <div className="relative z-10 px-4 w-full h-full p-8 shadow-lg flex flex-col items-center justify-center text-center">
+        {/* Base scrim — garante mínimo de legibilidade em qualquer imagem */}
+        <div className="absolute inset-0 bg-primary/55" />
+        {/* Gradient direcional — reforça lado esquerdo onde está o texto */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/70 to-transparent" />
+        {/* Vinheta superior e inferior */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-transparent to-primary/80" />
+
+        <div className="relative w-full max-w-screen-xl mx-auto px-6 lg:px-8 pt-28 pb-16">
+          {/* Back button */}
+          <Link
+            href="/#services"
+            className="inline-flex items-center gap-1 text-white/50 hover:text-highlight font-secondary text-xs uppercase tracking-[0.2em] mb-10 transition-colors duration-200 group"
+            aria-label="Voltar para todos os serviços"
+          >
+            <ChevronLeft className=" w-3.5 h-3.5 transition-transform duration-200 group-hover:-translate-x-0.5" />
+            Todos os serviços
+          </Link>
+
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3 mb-6" aria-hidden="true">
+            <span className="block w-10 h-px bg-highlight" />
+            <span className="text-white/60 font-secondary text-xs uppercase tracking-[0.25em]">
+              Advocacia Especializada
+            </span>
+          </div>
+
+          {/* Title */}
           <h1
             id="hero-service-section"
-            className="text-5xl md:text-7xl font-primary font-bold uppercase tracking-wide"
+            className="font-primary text-white text-5xl md:text-6xl xl:text-7xl font-bold leading-[1.05] uppercase mb-6"
+            style={{ textShadow: "0 2px 16px rgba(2,6,23,0.9), 0 4px 32px rgba(2,6,23,0.7)" }}
           >
             {slugData.title}
           </h1>
-          <h2
+
+          {/* Gold divider */}
+          <div className="w-16 h-px bg-highlight/60 mb-6" aria-hidden="true" />
+
+          {/* Subtitle */}
+          <p
             id="hero-service-subtitle"
-            className="mt-4 text-lg md:text-2xl font-secondary tracking-wide text-textPrimary"
+            className="font-secondary text-white text-base md:text-lg max-w-lg leading-relaxed mb-10"
+            style={{ textShadow: "0 1px 10px rgba(2,6,23,0.95), 0 2px 24px rgba(2,6,23,0.8)" }}
           >
             {slugData.subTitle}
-          </h2>
-          <div id="hero-cta-button" className="flex justify-center">
+          </p>
+
+          {/* CTA */}
+          <div id="hero-cta-button">
             <ContactButton label={slugData.ctaPrimary.label} />
           </div>
         </div>
       </section>
 
-      <section className="mt-12 mb-10 px-4 md:px-0 bg-gradient-to-b from-primary via-secondary to-primary max-h-fit flex flex-col items-center justify-center text-left">
+      {/* TAGLINE + INFO */}
+      <section className="py-16 px-4 md:px-8 bg-gradient-to-b from-primary via-secondary to-primary">
         {slugData.tagline && (
           <p
             id="tagline-text"
-            className="m-4 text-thin md:text-thin font-secondary max-w-4xl text-slate-300"
+            className="max-w-4xl mx-auto mb-10 text-slate-400 font-secondary text-base leading-relaxed border-l-2 border-highlight/40 pl-5 italic"
           >
             {slugData.tagline}
           </p>
         )}
+
         <div
           id="info-section"
-          className="sticky max-w-4xl max-h-fit mx-auto bg-primary rounded-xl shadow-lg p-8 border border-white/20 backdrop-blur-sm"
+          className="max-w-4xl mx-auto bg-primary/70 rounded-xl shadow-xl p-8 md:p-10 border border-white/10 backdrop-blur-sm"
         >
-          <h2 className="text-2xl md:text-3xl font-primary font-semibold uppercase tracking-wide text-highlight mb-6 text-center">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3 mb-6">
+            <span className="block w-8 h-px bg-highlight" aria-hidden="true" />
+            <span className="text-highlight/70 font-secondary text-xs uppercase tracking-[0.25em]">
+              Entenda seus direitos
+            </span>
+          </div>
+
+          <h2 className="text-2xl md:text-3xl font-primary font-semibold uppercase tracking-wide text-highlight mb-8">
             O que você precisa saber?
           </h2>
-          <div className="mt-2 text-sm md:text-lg font-secondary text-textPrimary space-y-6">
+
+          <div className="text-sm md:text-base font-secondary text-textPrimary space-y-6">
             {typeof slugData.description === "string" ? (
-              <p className="leading-relaxed font-secondary">{slugData.description}</p>
+              <p className="leading-relaxed font-secondary text-white/80">
+                {slugData.description}
+              </p>
             ) : (
               slugData.description.map(
-                (
-                  desc: { p: string; ul?: string[]; p2?: string },
-                  idx: number
-                ) => (
+                (desc: { p: string; ul?: string[]; p2?: string }, idx: number) => (
                   <div key={idx} className="mb-4">
-                    <p className="mb-2 leading-relaxed font-secondary">{desc.p}</p>
+                    <p className="mb-3 leading-relaxed font-secondary text-white/80">{desc.p}</p>
                     {desc.ul && desc.ul.length > 0 && (
-                      <ul className="list-disc list-inside ml-6 mb-2 space-y-1 text-highlight font-secondary">
+                      <ul className="list-none ml-2 mb-3 space-y-2">
                         {desc.ul.map((item: string, i: number) => (
-                          <li key={i} className="pl-1">
-                            {item}
+                          <li key={i} className="flex items-start gap-3 text-white/70 font-secondary">
+                            <span className="text-highlight shrink-0 mt-0.5 font-bold">→</span>
+                            <span>{item}</span>
                           </li>
                         ))}
                       </ul>
                     )}
                     {desc.p2 && (
-                      <p className="mt-2 leading-relaxed font-secondary">{desc.p2}</p>
+                      <p className="mt-2 leading-relaxed font-secondary text-white/80">{desc.p2}</p>
                     )}
                   </div>
                 )
@@ -183,59 +207,84 @@ export default async function ServicePage({ params }: ServicePageProps) {
       </section>
 
       {/* BENEFÍCIOS */}
-      <section className="py-16 px-6 md:px-12 bg-gradient-to-b from-slate-200 via-slate-300 to-slate-200 text-textSecondary text-center relative max-h-fit">
-        <div className="absolute top-0 left-0 w-full h-full opacity-50 pointer-events-none">
+      <section className="py-16 px-6 md:px-12 bg-secondary relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
           <Image
             src="./services/Patterns.svg"
-            alt="Imagem de fundo"
+            alt=""
             fill
             className="object-cover"
-            style={{
-              filter: "invert(80%) sepia(1) saturate(5) hue-rotate(180deg)",
-            }}
           />
         </div>
 
-        <h2 className="font-primary text-3xl md:text-4xl uppercase mb-8 text-secondary">
-          Por que escolher nossos serviços?
-        </h2>
+        <div className="relative max-w-4xl mx-auto">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3 mb-6">
+            <span className="block w-10 h-px bg-highlight" aria-hidden="true" />
+            <span className="text-white/60 font-secondary text-xs uppercase tracking-[0.25em]">
+              Nossos diferenciais
+            </span>
+          </div>
 
-        <ul
-          id="benefits-list"
-          className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 text-left"
-        >
-          {slugData.benefits.map((benefit: string, i: number) => (
-            <li
-              key={i}
-              className="bg-slate-200 p-4 rounded-lg border-l-4 border-secondary"
-            >
-              <span className="block text-sm md:text-lg font-secondary text-secondary">
-                {benefit}
-              </span>
-            </li>
-          ))}
-        </ul>
+          <h2 className="font-primary text-3xl md:text-4xl uppercase mb-10 text-white">
+            Por que escolher nossos{" "}
+            <span className="text-highlight italic">serviços</span>?
+          </h2>
+
+          <ul id="benefits-list" className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {slugData.benefits.map((benefit: string, i: number) => (
+              <li
+                key={i}
+                className="flex items-start gap-4 bg-primary/50 p-5 border border-white/10 hover:border-highlight/30 transition-colors duration-300"
+              >
+                <span className="text-highlight font-bold shrink-0 mt-0.5">→</span>
+                <span className="font-secondary text-white/80 text-sm md:text-base leading-relaxed">
+                  {benefit}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       {/* CTA SECUNDÁRIO */}
       <section
         id="secondary-cta-section"
-        className="py-16 bg-gradient-to-b from-secondary via-gray-800 to-secondary text-textPrimary text-center px-4"
+        className="py-20 bg-gradient-to-b from-primary via-secondary to-primary text-textPrimary text-center px-4 relative overflow-hidden"
       >
-        <h2 className="font-primary text-3xl md:text-4xl uppercase mb-4">
-          Agende sua consulta agora mesmo
-        </h2>
-        <p className="text-sm md:text-lg max-w-2xl mx-auto font-secondary">
-          Atendimento humanizado, rápido, online ou presencial. <br />
-          Tire suas dúvidas com quem entende do assunto.
-        </p>
-        <div className="flex justify-center">
+        <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
+          <Image src="./services/Patterns.svg" alt="" fill className="object-cover" />
+        </div>
+
+        <div className="relative max-w-2xl mx-auto">
+          {/* Centered eyebrow */}
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="block w-10 h-px bg-highlight/50" aria-hidden="true" />
+            <span className="text-highlight/70 font-secondary text-xs uppercase tracking-[0.25em]">
+              Consulta gratuita
+            </span>
+            <span className="block w-10 h-px bg-highlight/50" aria-hidden="true" />
+          </div>
+
+          <h2 className="font-primary text-3xl md:text-4xl uppercase mb-4">
+            Agende sua consulta{" "}
+            <span className="text-highlight italic">agora mesmo</span>
+          </h2>
+
+          <div className="w-12 h-px bg-highlight/30 mx-auto mb-6" aria-hidden="true" />
+
+          <p className="text-sm md:text-lg font-secondary text-white/70 mb-8">
+            Atendimento humanizado, rápido, online ou presencial.
+            <br />
+            Tire suas dúvidas com quem entende do assunto.
+          </p>
+
           <ContactButton label="Falar no WhatsApp" />
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-6 md:px-12 bg-muted text-textSecondary">
+      <section className="bg-muted text-textSecondary">
         <FaqComponent
           faqData={slugData.faq.map(
             (
