@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import Script from "next/script";
 import { iniciarChatWhatsApp } from "../../../utils/waapi/waapi";
 
 interface FAQItem {
@@ -66,6 +67,19 @@ const faqData: FAQItem[] = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqData.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
 const FAQSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -75,6 +89,12 @@ const FAQSection: React.FC = () => {
 
   return (
     <section className="w-full bg-primary py-20 px-6 lg:px-8">
+      <Script
+        id="jsonld-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
       <div className="max-w-3xl mx-auto">
 
         {/* Eyebrow */}

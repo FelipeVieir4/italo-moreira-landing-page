@@ -1,15 +1,16 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
 import ContactButton from "@/components/btn-Contact/btn-contact";
 
 const credentials = [
-  "OAB/MG",
   "Direito Civil",
   "Direito do Consumidor",
   "Golpe do PIX",
 ];
+
+const socialProof = ["OAB/MG", "Atendimento Online", "Primeira Consulta Gratuita"];
 
 const container = {
   hidden: {},
@@ -21,7 +22,7 @@ const container = {
   },
 };
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 32 },
   show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: "easeOut" } },
 };
@@ -49,7 +50,7 @@ const HeroSection: React.FC = () => {
         />
       </motion.div>
 
-      {/* Gradient Overlays — forte à esquerda para garantir contraste */}
+      {/* Gradient Overlays */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/98 via-primary/80 to-primary/30" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
 
@@ -61,25 +62,24 @@ const HeroSection: React.FC = () => {
           animate="show"
           className="max-w-2xl xl:max-w-3xl"
         >
-          {/* Eyebrow — texto pequeno, fundo ~100% opaco = gold legível */}
+          {/* Eyebrow */}
           <motion.div variants={fadeUp} className="flex items-center gap-3 mb-8">
             <span className="block w-10 h-px bg-highlight" aria-hidden="true" />
-            <span className="text-white/60 font-secondary text-xs uppercase tracking-[0.25em]  ">
+            <span className="text-white/60 font-secondary text-xs uppercase tracking-[0.25em]">
               Advocacia Especializada
             </span>
           </motion.div>
 
-          {/* Título — branco para máximo contraste WCAG AAA */}
+          {/* Título */}
           <motion.h1
             variants={fadeUp}
             className="font-primary text-white text-5xl md:text-6xl xl:text-7xl font-bold leading-[1.08] mb-6"
           >
             Defendendo
             <br />
-            {/* "seus direitos" — gold com text-shadow escuro para contraste real */}
             <span
               className="italic font-bold text-highlight"
-              style={{ textShadow: "0 2px 12px rgba(2, 6, 23, 0.493), 0 0 40px rgba(2, 6, 23, 0.692)" }}
+              style={{ textShadow: "0 2px 12px rgba(2, 6, 23, 0.5), 0 0 40px rgba(2, 6, 23, 0.7)" }}
             >
               seus direitos
             </span>
@@ -94,16 +94,17 @@ const HeroSection: React.FC = () => {
             aria-hidden="true"
           />
 
-          {/* Subtitle */}
+          {/* Subtitle — sem caixa de fundo, texto shadow para legibilidade */}
           <motion.p
             variants={fadeUp}
-            className="font-secondary text-white text-base md:text-lg max-w-lg leading-relaxed mb-8 bg-primary/50 p-1"
+            className="font-secondary text-white text-base md:text-lg max-w-lg leading-relaxed mb-8"
+            style={{ textShadow: "0 1px 8px rgba(2, 6, 23, 0.8), 0 2px 20px rgba(2, 6, 23, 0.6)" }}
           >
             Compromisso em oferecer tranquilidade e segurança jurídica, com
             soluções eficientes e alinhadas aos seus direitos.
           </motion.p>
 
-          {/* Credential Pills — fundo quase opaco, gold legível */}
+          {/* Credential Pills */}
           <motion.div
             variants={fadeUp}
             className="flex flex-wrap gap-2 mb-10"
@@ -114,7 +115,7 @@ const HeroSection: React.FC = () => {
               <span
                 key={c}
                 role="listitem"
-                className="border border-highlight/40 text-highlight/90 text-[11px] font-secondary uppercase tracking-wider px-3 py-1.5 bg-white/70"
+                className="border border-highlight/40 text-highlight/90 text-[11px] font-secondary uppercase tracking-wider px-3 py-1.5 bg-primary/60 backdrop-blur-sm"
               >
                 {c}
               </span>
@@ -124,6 +125,24 @@ const HeroSection: React.FC = () => {
           {/* CTA */}
           <motion.div variants={fadeUp}>
             <ContactButton label="Agende uma Consulta" />
+          </motion.div>
+
+          {/* Social proof */}
+          <motion.div
+            variants={fadeUp}
+            className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-6"
+            aria-label="Diferenciais"
+          >
+            {socialProof.map((item, i) => (
+              <React.Fragment key={item}>
+                <span className="text-primary/40 font-secondary text-xs tracking-wide">
+                  {item}
+                </span>
+                {i < socialProof.length - 1 && (
+                  <span className="text-primary/30 text-xs" aria-hidden="true">●</span>
+                )}
+              </React.Fragment>
+            ))}
           </motion.div>
         </motion.div>
       </div>

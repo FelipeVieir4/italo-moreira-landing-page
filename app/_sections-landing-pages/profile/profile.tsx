@@ -2,12 +2,18 @@
 import React from "react";
 import Image from "next/image";
 import ContactButton from "@/components/btn-Contact/btn-contact";
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
+
+const stats = [
+  { value: "5+", label: "Anos de experiência" },
+  { value: "OAB/MG", label: "Regularmente inscrito" },
+  { value: "Cível & Criminal", label: "Áreas de atuação" },
+];
 
 const ProfileSection: React.FC = () => {
   return (
@@ -25,9 +31,9 @@ const ProfileSection: React.FC = () => {
           aria-hidden="true"
         />
       </div>
-      <div className="absolute inset-0 -z-10 bg-primary/85" />
+      <div className="absolute inset-0 -z-10 bg-primary/50" />
 
-      <div className="relative max-w-screen-xl mx-auto w-full">
+      <div className="relative max-w-screen-xl mx-auto w-full bg-primary/50 backdrop-blur rounded-lg shadow-2xl p-8 lg:p-16">
 
         {/* Eyebrow */}
         <motion.div
@@ -54,13 +60,13 @@ const ProfileSection: React.FC = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="shrink-0 mx-auto lg:mx-0"
           >
-            <div className="relative w-56 h-64 md:w-64 md:h-80 border-2 border-highlight/40 overflow-hidden shadow-2xl">
+            <div className="relative w-64 h-80 md:w-72 md:h-96 border-2 border-highlight/40 overflow-hidden shadow-2xl">
               <Image
                 src="./profile/_55A2773.jpg"
                 alt="Dr. Italo Moreira — Advogado"
                 fill
                 style={{ objectFit: "cover", objectPosition: "top" }}
-                sizes="(max-width: 768px) 224px, 256px"
+                sizes="(max-width: 768px) 256px, 288px"
               />
             </div>
             {/* Badge abaixo da foto */}
@@ -86,7 +92,7 @@ const ProfileSection: React.FC = () => {
               Quem vai te atender?
             </h2>
 
-            <div className="space-y-4 text-white/70 font-secondary text-base leading-relaxed">
+            <div className="space-y-4 text-white/85 font-secondary text-base leading-relaxed">
               <p>
                 Sou um advogado com sólida formação e ampla experiência nas
                 áreas cível, criminal e na resolução de conflitos
@@ -110,6 +116,20 @@ const ProfileSection: React.FC = () => {
                 dando-lhe a confiança necessária para que se sinta seguro
                 durante todo o processo.
               </p>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
+              {stats.map((stat) => (
+                <div key={stat.label} className="flex flex-col gap-1">
+                  <span className="text-highlight font-primary font-bold text-lg md:text-xl leading-none">
+                    {stat.value}
+                  </span>
+                  <span className="text-white/40 font-secondary text-xs leading-tight">
+                    {stat.label}
+                  </span>
+                </div>
+              ))}
             </div>
 
             <div className="pt-2">

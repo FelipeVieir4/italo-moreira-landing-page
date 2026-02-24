@@ -10,7 +10,7 @@ const ContactButton: React.FC<ContactButtonProps> = ({ label }) => {
   return (
     <button
       onClick={iniciarChatWhatsApp}
-      className="inline-flex items-center gap-3 border border-highlight/70 text-white bg-blue-950 px-6 py-3 text-sm font-secondary uppercase tracking-wider transition-all duration-300 hover:bg-highlight hover:text-primary hover:border-highlight focus:outline-none focus:ring-2 focus:ring-highlight focus:ring-offset-2 focus:ring-offset-primary"
+      className="inline-flex items-center gap-3 border border-highlight/70 text-primary bg-white/50 px-6 py-3 text-sm font-secondary uppercase tracking-wider transition-all duration-300 hover:bg-highlight hover:text-primary hover:border-highlight focus:outline-none focus:ring-2 focus:ring-highlight focus:ring-offset-2 focus:ring-offset-primary"
       aria-label="Agendar consulta pelo WhatsApp"
     >
       {/* WhatsApp icon */}
