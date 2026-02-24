@@ -131,7 +131,7 @@ const Navbar: React.FC = () => {
                   }}
                   className="w-full border border-highlight/60 text-highlight py-3.5 font-secondary uppercase tracking-[0.15em] text-sm hover:bg-highlight hover:text-primary transition-all duration-300"
                 >
-                  Consulta Gratuita
+                  Falar Agora!
                 </button>
               </li>
             </ul>

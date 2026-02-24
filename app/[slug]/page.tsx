@@ -261,7 +261,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="block w-10 h-px bg-highlight/50" aria-hidden="true" />
             <span className="text-highlight/70 font-secondary text-xs uppercase tracking-[0.25em]">
-              Consulta gratuita
+              Falar Agora!
             </span>
             <span className="block w-10 h-px bg-highlight/50" aria-hidden="true" />
           </div>
