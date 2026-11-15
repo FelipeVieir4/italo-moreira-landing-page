@@ -1,0 +1,12 @@
+{
+  "source": "google",
+  "placeId": null,
+  "name": null,
+  "rating": null,
+  "userRatingCount": null,
+  "mapsUrl": null,
+  "reviewsUrl": null,
+  "writeReviewUrl": null,
+  "fetchedAt": null,
+  "reviews": []
+}

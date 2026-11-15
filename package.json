@@ -5,17 +5,19 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "prebuild": "node scripts/fetch-google-reviews.mjs",
+    "start": "npx serve@14 out",
+    "lint": "next lint",
+    "reviews": "node scripts/fetch-google-reviews.mjs",
+    "images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "lucide-react": "^0.516.0",
-    "motion": "^12.18.1",
+    "marked": "^18.2.0",
     "next": "15.2.8",
-    "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

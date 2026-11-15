@@ -1,25 +1,33 @@
-import Link from 'next/link';
+import Link from "next/link";
+import Logo, { ColumnMark } from "@/components/brand/Logo";
 
-export default function UnderConstruction() {
-    return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-primary text-textPrimary font-primary">
-            <h1 className="text-4xl font-bold mb-4">Página não encontrada</h1>
-            <p className="text-lg mb-6">Não há nada por aqui!!!</p>
-            <div className="flex items-center justify-center mb-6">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-32 h-32 text-highlight"
-                >
-                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
-                </svg>
-            </div>
-            <Link href="/">
-                <span className="px-6 py-3 bg-highlight text-white rounded-md hover:bg-highlight-dark transition font-secondary">
-                    Voltar para a página inicial
-                </span>
-            </Link>
+export const metadata = {
+  title: "Página não encontrada",
+  robots: { index: false },
+};
+
+export default function NotFound() {
+  return (
+    <main className="grain relative flex min-h-screen flex-col bg-ink text-paper">
+      <div className="container-site flex h-[var(--header-h)] items-center">
+        <Logo />
+      </div>
+      <div className="container-site flex flex-1 flex-col items-center justify-center py-20 text-center">
+        <ColumnMark className="h-12 w-12 text-gold-light" />
+        <p className="eyebrow eyebrow-light mt-8">Erro 404</p>
+        <h1 className="heading-lg mt-5 max-w-xl">Esta página não foi encontrada</h1>
+        <p className="mt-5 max-w-md leading-relaxed text-paper/65">
+          O endereço pode ter mudado ou o conteúdo foi removido. Que tal voltar ao início ou ler os artigos do blog?
+        </p>
+        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <Link href="/" className="btn-gold">
+            Voltar ao início
+          </Link>
+          <Link href="/blog" className="btn-ghost-light">
+            Ir para o blog
+          </Link>
         </div>
-    );
+      </div>
+    </main>
+  );
 }

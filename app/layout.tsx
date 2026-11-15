@@ -1,94 +1,98 @@
-import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
-import "./globals.css";
+import type { Metadata, Viewport } from "next";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import Script from "next/script";
+import "./globals.css";
+import { site } from "@/lib/site";
+import RevealObserver from "@/components/site/RevealObserver";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-family-primary",
+const display = Cormorant_Garamond({
+  variable: "--font-display",
   subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
 });
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-family-secondary",
+const sans = Manrope({
+  variable: "--font-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Italo Moreira - Advogado | Advocacia Especializada  ",
-  description:
-    "Especialista em direito civil e criminal. Atendimento personalizado para suas necessidades jurídicas. Consulte um especialista hoje!",
+  metadataBase: new URL(site.url),
+  title: {
+    default: "Italo Moreira | Advogado em Belo Horizonte — Consumidor, Bancário e Cível",
+    template: "%s | Italo Moreira Advocacia",
+  },
+  description: site.description,
+  applicationName: site.name,
+  authors: [{ name: site.lawyer, url: site.url }],
+  creator: site.lawyer,
+  publisher: site.name,
+  category: "Legal",
   keywords: [
-    "Advocacia especializada",
-    "Advogado Dr. Italo Moreira",
-    "Direito civil",
-    "Direito criminal",
-    "Consultoria jurídica",
-    "Assessoria jurídica",
+    "advogado em Belo Horizonte",
+    "advogado bancário",
+    "advogado do consumidor",
+    "golpe do PIX advogado",
+    "fraude bancária",
+    "negativação indevida",
+    "advogado cível BH",
+    "divórcio Belo Horizonte",
   ],
-  authors: [{ name: "Dr. Italo Moreira" }],
-  robots: "index, follow",
+  alternates: { canonical: "/" },
+  formatDetection: { telephone: false, email: false, address: false },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  },
   openGraph: {
-    title: "Advocacia Especializada | Dr. Italo Moreira",
-    description:
-      "Especialista em direito civil e criminal. Consulte um especialista hoje!",
-    url: "https://www.italomoreira.adv.br",
     type: "website",
-    siteName: "Dr. Italo Moreira Advocacia",
-    locale: "pt_BR",
-    images: [
-      {
-        url: "#",
-        width: 1200,
-        height: 630,
-        alt: "Advocacia Especializada - Dr. Italo Moreira",
-      },
-    ],
+    locale: site.locale,
+    url: site.url,
+    siteName: site.name,
+    title: "Italo Moreira | Advogado em Belo Horizonte",
+    description: site.description,
+    images: [{ url: site.images.og, width: 1200, height: 630, alt: "Italo Moreira — Advocacia Cível, do Consumidor e Bancária" }],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@",
-    creator: "@i",
-    title: "Advocacia Especializada | Dr. Italo Moreira",
-    description:
-      "Especialista em direito civil e criminal. Consulte um especialista hoje!",
-    images: ["#"],
+    title: "Italo Moreira | Advogado em Belo Horizonte",
+    description: site.description,
+    images: [site.images.og],
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const viewport: Viewport = {
+  themeColor: "#0b1220",
+  width: "device-width",
+  initialScale: 1,
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-br">
-   
-        {/* <!-- Google Tag Manager --> */}
-        <Script id="gtm-head" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-W8Z26NQ8');
-          `}
+    <html lang="pt-BR" className={`${display.variable} ${sans.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Habilita animações de entrada somente quando há JS (sem JS o conteúdo aparece normalmente) */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+      </head>
+      <body>
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${site.gtmId}');`}
         </Script>
-        {/* <!-- End Google Tag Manager --> */}
-     
-      <body
-        className={`${plusJakartaSans.variable} ${playfairDisplay.variable} antialiased`}
-      >
-        {/* <!-- Google Tag Manager (noscript) --> */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-W8Z26NQ8"
+            src={`https://www.googletagmanager.com/ns.html?id=${site.gtmId}`}
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
+            title="Google Tag Manager"
+          />
         </noscript>
-        {/* <!-- End Google Tag Manager (noscript) --> */}
         {children}
+        <RevealObserver />
       </body>
     </html>
   );
