@@ -1,0 +1,35 @@
+# Atualiza as avaliações do Google no site uma vez por dia.
+#
+# O site é publicado pela Vercel. Este workflow só "cutuca" um Deploy Hook da
+# Vercel; o build roda lá e executa scripts/fetch-google-reviews.mjs (prebuild),
+# que busca a nota e as avaliações na Places API.
+#
+# Configuração (uma vez):
+#   1. Vercel → Settings → Git → Deploy Hooks: crie um hook para a branch main.
+#   2. GitHub → Settings → Secrets and variables → Actions:
+#      secret VERCEL_DEPLOY_HOOK_URL = URL do hook.
+#   3. Vercel → Settings → Environment Variables:
+#      GOOGLE_PLACES_API_KEY (e, de preferência, GOOGLE_PLACE_ID).
+name: Atualizar avaliações do Google
+
+on:
+  schedule:
+    - cron: "0 9 * * *" # 09:00 UTC = 06:00 em Brasília
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Disparar rebuild na Vercel
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "VERCEL_DEPLOY_HOOK_URL não configurado — nada a fazer."
+            exit 0
+          fi
+          curl -fsS -X POST "$HOOK" > /dev/null
+          echo "Rebuild solicitado."

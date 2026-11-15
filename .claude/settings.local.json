@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(du -sh /workspaces/italo-moreira-landing-page/public/*)",
+      "Bash(npm run build)",
+      "Bash(npx tsc --noEmit)"
     ]
   }
 }
